@@ -4,7 +4,7 @@
       <div class="adaptation__wrapper">
         <div class="adaptation__image">
           <img
-            src="/img/phone-adaptation.png"
+            src="/img/phone-adaptation.webp"
             alt="img"
             class="adaptation__img"
           />

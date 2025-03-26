@@ -2,8 +2,8 @@
   <section class="blogs">
     <Header />
     <div class="blogs__wrapper">
-      <img class="blogs__img-1" src="/img/blogs-hero-1.png" alt="img" />
-      <img class="blogs__img-2" src="/img/blogs-hero-2.png" alt="img" />
+      <img class="blogs__img-1" src="/img/blogs-hero-1.webp" alt="img" />
+      <img class="blogs__img-2" src="/img/blogs-hero-2.webp" alt="img" />
       <div class="blogs__wrapper-content">
         <h1 class="blogs__title">Блог</h1>
         <p class="blogs__description">Полезные статьи для вашего бизнеса</p>
@@ -20,7 +20,7 @@
   width: 100%;
   height: 100%;
   min-height: 791px;
-  background-image: url('/img/hero-blogs.png');
+  background-image: url('/img/hero-blogs.webp');
   background-repeat: no-repeat;
   background-size: cover;
   @media screen and (max-width: 1500px) {
@@ -30,7 +30,7 @@
     min-height: 627px;
   }
   @media screen and (max-width: 817px) {
-    background-image: url('/img/blogs-hero-817.png');
+    background-image: url('/img/blogs-hero-817.webp');
     min-height: 563px;
   }
   @media screen and (max-width: 655px) {

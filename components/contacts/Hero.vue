@@ -3,7 +3,11 @@
     <Header />
     <div class="container">
       <div class="contacts__wrapper">
-        <img src="/img/hero-img-contacts.png" alt="img" class="contacts__img" />
+        <img
+          src="/img/hero-img-contacts.webp"
+          alt="img"
+          class="contacts__img"
+        />
         <div class="contacts__content">
           <div class="contacts__description-wrapper">
             <h1 class="contacts__title">КОНТАКТЫ</h1>
@@ -25,7 +29,7 @@
   min-height: 791px;
   position: relative;
   overflow: hidden;
-  background-image: url('/img/hero-contacts.png');
+  background-image: url('/img/hero-contacts.webp');
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 1;
@@ -34,7 +38,7 @@
     position: absolute;
     width: 1361px;
     height: 564px;
-    background-image: url('/img/shadow-contacts.png');
+    background-image: url('/img/shadow-contacts.webp');
     background-repeat: no-repeat;
     background-size: contain;
     top: 50%;

@@ -40,7 +40,7 @@ const handleClickOnBtnToMap = () => {
       position="top-center left-center"
       :settings="{ coordinates: [34.358848, 53.267493] }"
     >
-      <img class="pin" src="/img/marker.png" alt="" />
+      <img class="pin" src="/img/marker.webp" alt="" />
     </yandex-map-marker>
     <yandex-map-controls
       :settings="{

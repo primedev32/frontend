@@ -1,6 +1,6 @@
 export const typesList = [
   {
-    img: '/img/types-stie-1.png',
+    img: '/img/types-stie-1.webp',
     imgClass: 'img-1',
     title: 'Лендинг',
     description: 'Простой и эффективный сайт для быстрого представления вашего продукта или услуги, с фокусом на конверсии и привлечении клиентов.',
@@ -13,8 +13,8 @@ export const typesList = [
     colorBtn: '#FFF',
   },
   {
-    img: '/img/types-stie-2.png',
-    img1086: '/img/types-stie-2-1086.png',
+    img: '/img/types-stie-2.webp',
+    img1086: '/img/types-stie-2-1086.webp',
     imgClass: 'img-2',
     title: 'ИНТЕРНЕТ-МАГАЗИН',
     description: 'Полноценный интернет-магазин для продажи товаров онлайн. Удобный интерфейс для покупателей и простота в управлении для вас.',
@@ -38,8 +38,8 @@ export const typesList = [
     colorBtn: '#000',
   },
   {
-    img: '/img/types-stie-3.png',
-    img1086: '/img/types-stie-3-1086.png',
+    img: '/img/types-stie-3.webp',
+    img1086: '/img/types-stie-3-1086.webp',
     imgClass: 'img-3',
     title: 'Дизайн',
     description: 'Профессиональный дизайн вашего сайта',

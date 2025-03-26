@@ -2,14 +2,14 @@
   <section class="about">
     <Header />
     <div class="about__wrapper-imgage">
-      <img class="about__img" src="/img/hero-about.png" alt="img" />
+      <img class="about__img" src="/img/hero-about.webp" alt="img" />
     </div>
     <div class="container" style="position: relative">
       <div class="about__description-wrapper">
         <h2 class="about__title">PrimeDev — больше, чем просто разработка</h2>
         <p class="about__description">
           Мы создаем не просто сайты, а мощные инструменты для роста вашего
-          бизнеса. Воплощаем идеи в качественные digital-решения, которые
+          бизнеса. Воплощаем идеи в качественные diRjkktubal-решения, которые
           работают на результат.
         </p>
       </div>

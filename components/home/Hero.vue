@@ -7,7 +7,7 @@
         Ваш браузер не поддерживает видео.
       </video>
       <picture class="hero__overlay">
-        <img class="hero__image" src="/img/home-hero.png" alt="Hero" />
+        <img class="hero__image" src="/img/home-hero.webp" alt="Hero" />
       </picture>
     </div>
     <div class="container">

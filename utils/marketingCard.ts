@@ -25,7 +25,7 @@ export const marketingCard = [
     backgroundColor: '#FFF ',
     topBtn: '/svg/bool-1.svg ',
     hasBorder: false,
-    backgroundImg: '/img/marketing-1.png',
+    backgroundImg: '/img/marketing-1.webp',
   },
   {
     title: 'Создание сайта',
@@ -44,6 +44,6 @@ export const marketingCard = [
     backgroundColor: '#222624 ',
     topBtn: '/svg/bool-2.svg ',
     hasBorder: true,
-    backgroundImg: '/img/marketing-2.png',
+    backgroundImg: '/img/marketing-2',
   },
 ]

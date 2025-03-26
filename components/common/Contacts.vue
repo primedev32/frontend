@@ -1,7 +1,7 @@
 <template>
   <section class="contacts" id="contacts">
     <div class="container contacts__wrapper" style="position: relative">
-      <img class="contacts__img" src="/img/home-contacts.png" alt="img" />
+      <img class="contacts__img" src="/img/home-contacts.webp" alt="img" />
       <h2 class="contacts__title">{{ title }}</h2>
       <h3 class="contacts__subtitle">
         Заполняй мини-бриф, и мы мчимся к тебе с ответом в считанные минуты
@@ -197,7 +197,7 @@ defineProps<{
   overflow: hidden;
   position: relative; /* Обязательно добавляем позиционирование для использования z-index */
   z-index: 1;
-  // background-image: url('/img/home-contacts.png');
+  // background-image: url('/img/home-contacts.webp');
   // background-repeat: no-repeat;
   // background-position: right 0px;
   // background-size: contain;
@@ -209,7 +209,7 @@ defineProps<{
     background-repeat: no-repeat;
     background-position: right 0px;
     background-size: contain;
-    background-image: url('/img/home-contacts-913.png');
+    background-image: url('/img/home-contacts-913.webp');
   }
   @media screen and (max-width: 655px) {
     padding: 80px 0;

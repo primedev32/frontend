@@ -11,7 +11,7 @@
             <div class="blogs__items-wrap">
               <p class="blogs__items-description">{{ item.description }}</p>
               <img
-                src="/img/blogs-items-card.png"
+                src="/img/blogs-items-card.webp"
                 alt="img"
                 class="blogs__items-card"
               />
@@ -46,7 +46,7 @@
     }
   }
   &__items-item {
-    background-image: url('/img/blogs-items.png');
+    background-image: url('/img/blogs-items.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

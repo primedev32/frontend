@@ -5,7 +5,7 @@
         <div class="advantage__content-1">
           <h2 class="advantage__title">Почему стоит работать с нами?</h2>
           <div class="advantage__img-wrapper">
-            <img src="/img/advantage.png" alt="img" class="advantage__img" />
+            <img src="/img/advantage.webp" alt="img" class="advantage__img" />
             <span class="advantage__img-shadow"></span>
           </div>
           <div class="advantage__wrapper-btn">
@@ -15,7 +15,7 @@
               ></NuxtLink
             >
             <img
-              src="/img/home-arrow.png"
+              src="/img/home-arrow.webp"
               alt="img"
               class="advantage__btn-arrow"
             />
@@ -23,7 +23,7 @@
         </div>
         <div class="advantage__content-817">
           <h2 class="advantage__title">Почему стоит работать с нами?</h2>
-          <img class="advantage__img-817" src="/img/advantage.png" alt="img" />
+          <img class="advantage__img-817" src="/img/advantage.webp" alt="img" />
         </div>
         <div class="advantage__content">
           <ul class="list-reset advantage__list">

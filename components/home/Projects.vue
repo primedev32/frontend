@@ -6,7 +6,7 @@
         <span class="projects__title-span">безупречное исполнение</span>
       </h2>
       <div class="projects__wrapper-img">
-        <img src="/img/project-1.png" alt="img" class="projects__img" />
+        <img src="/img/project-1.webp" alt="img" class="projects__img" />
         <div class="projects__img-content">
           <h3 class="projects__img-content-title">
             Корпоративный сайт для компании «Zero Hawk», 2024

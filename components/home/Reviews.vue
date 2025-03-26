@@ -176,21 +176,21 @@ const handleClickNext = () => {
     border-radius: 15px;
     min-height: 456px;
     height: 100%;
-    background: url('/img/quote-small.png') no-repeat 20px 20px / 40px auto,
-      url('/img/quote.png') no-repeat 20px 30px / 170px auto, #fff;
+    background: url('/img/quote-small.webp') no-repeat 20px 20px / 40px auto,
+      url('/img/quote.webp') no-repeat 20px 30px / 170px auto, #fff;
 
     @media screen and (max-width: 1500px) {
       padding: 169px 20px 20px 20px;
       min-height: 384px;
-      background: url(/img/quote-small.png) no-repeat 20px 20px / 35px auto,
-        url(/img/quote.png) no-repeat 20px 30px / 115px auto, #fff;
+      background: url(/img/quote-small.webp) no-repeat 20px 20px / 35px auto,
+        url(/img/quote.webp) no-repeat 20px 30px / 115px auto, #fff;
     }
     @media screen and (max-width: 1200px) {
       min-height: 325px;
     }
     @media screen and (max-width: 463px) {
-      background: url(/img/quote-small.png) no-repeat 20px 20px / 35px auto,
-        url(/img/quote.png) no-repeat 20px 30px / 100px auto, #fff;
+      background: url(/img/quote-small.webp) no-repeat 20px 20px / 35px auto,
+        url(/img/quote.webp) no-repeat 20px 30px / 100px auto, #fff;
     }
   }
   &__buttons {
