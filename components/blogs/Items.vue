@@ -46,7 +46,7 @@
     }
   }
   &__items-item {
-    background-image: url('/img/blogs-items.webp');
+    background-image: url('/img/blogs-items.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

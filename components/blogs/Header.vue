@@ -7,7 +7,7 @@
         >
 
         <NuxtLink to="/blogs" class="header__btn">
-          <span class="header__btn-text">Вернуться на главную</span>
+          <span class="header__btn-text">Вернуться</span>
         </NuxtLink>
       </div>
     </div>

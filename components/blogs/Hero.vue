@@ -23,6 +23,7 @@
   background-image: url('/img/hero-blogs.webp');
   background-repeat: no-repeat;
   background-size: cover;
+  z-index: 2;
   @media screen and (max-width: 1500px) {
     min-height: 651px;
   }

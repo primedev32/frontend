@@ -323,10 +323,12 @@ defineProps<{
     border-radius: 15px;
     background: #f0f0f0;
     width: 100%;
+    overflow-x: hidden;
     max-width: 497px;
     height: 65px;
     min-height: 65px;
     outline: none;
+    overflow-y: hidden;
     resize: none;
     &::placeholder {
       color: #000;
