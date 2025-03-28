@@ -15,7 +15,10 @@
       </div>
       <div class="footer__wrapper-2">
         <div class="footer__wrapper-policy">
-          <a href="/" class="footer__wrapper-policy-link" target="_blank"
+          <a
+            href="/doc/policy.pdf"
+            class="footer__wrapper-policy-link"
+            target="_blank"
             >Политика конфиденциальности</a
           >
           <span class="footer__wrapper-policy-text">© Primedev 2020–2025</span>

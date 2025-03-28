@@ -9,7 +9,7 @@ export function useValidation(fields: string[], _num: number = 6) {
 
   const validation: Schema = {
     email: string().email('Неверный формат (пример: RwNpM@example.com)').required('пример: RwNpM@example.com'),
-    name: string().min(5, 'Минимум 5 символа').required('Минимум 5 символа'),
+    name: string().min(2, 'Минимум 2 символа').required('Минимум 2 символа'),
     phone: string()
       .matches(/^\+?\d{1,3}?[-\s]?\(?\d{1,4}?\)?[-\s]?\d{1,4}[-\s]?\d{1,4}[-\s]?\d{1,9}$/, 'Неверный формат (пример: +79996211951)')
       .required('(пример: +79996211951)'),

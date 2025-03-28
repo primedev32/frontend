@@ -129,6 +129,13 @@
               />
             </div>
           </div>
+          <p class="contacts__text">
+            Нажимая на кнопку вы даёте согласие на обработку персональных данных
+            в соответствии с
+            <a class="contacts__policy" href="/doc/policy.pdf" target="_blank"
+              >Политикой конфиденциальности</a
+            >
+          </p>
           <button form="form" type="submit" class="btn-reset contacts__btn">
             <span class="contacts__btn-text">Отправить</span>
           </button>
@@ -371,7 +378,7 @@ defineProps<{
       flex-direction: column;
     }
     &:last-child {
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
   }
   &__input {
@@ -487,6 +494,19 @@ defineProps<{
   }
   &__btn-select-text-active {
     color: #fff;
+  }
+  &__text {
+    margin-bottom: 15px;
+    color: #000;
+    font-family: 'Onest';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.5;
+  }
+  &__policy {
+    color: #000;
   }
 }
 </style>
