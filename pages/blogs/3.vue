@@ -126,7 +126,35 @@
   </section>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+useHead({
+  title:
+    'Почему без современного сайта ваш бизнес теряет клиентов и как это исправить | Primedev.pro',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Узнайте, почему современный сайт — это ключ к успеху вашего бизнеса. Советы, как обновить сайт и вернуть потерянных клиентов.',
+    },
+    {
+      property: 'og:title',
+      content:
+        'Почему без современного сайта ваш бизнес теряет клиентов и как это исправить | Primedev.pro',
+    },
+    {
+      property: 'og:description',
+      content:
+        'Если ваш сайт устарел, вы теряете клиентов. Узнайте, как модернизация сайта может вернуть конкурентоспособность вашему бизнесу.',
+    },
+    { property: 'og:type', content: 'article' },
+    { property: 'og:url', content: 'https://primedev.pro/blogs/3' },
+    // { property: 'og:image', content: 'https://primedev.pro/images/blog-modern-website.jpg' },
+    { property: 'og:site_name', content: 'Primedev.pro' },
+    { property: 'og:locale', content: 'ru_RU' },
+    { name: 'robots', content: 'index, follow' },
+  ],
+})
+</script>
 
 <style lang="scss" scoped>
 .blog {

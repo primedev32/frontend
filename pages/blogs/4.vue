@@ -60,7 +60,33 @@
   </section>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+useHead({
+  title: 'Зачем вообще нужен веб-дизайн бизнесу? | Primedev.pro',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Узнайте, почему качественный веб-дизайн — это не просто эстетика, а важный инструмент для привлечения клиентов и повышения конверсии вашего бизнеса.',
+    },
+    {
+      property: 'og:title',
+      content: 'Зачем вообще нужен веб-дизайн бизнесу? | Primedev.pro',
+    },
+    {
+      property: 'og:description',
+      content:
+        'Веб-дизайн — это не только внешний вид сайта. Он помогает создавать позитивное впечатление о бизнесе и улучшать пользовательский опыт. Узнайте, как.',
+    },
+    { property: 'og:type', content: 'article' },
+    { property: 'og:url', content: 'https://primedev.pro/blogs/4' },
+    // { property: 'og:image', content: 'https://primedev.pro/images/blog-web-design.jpg' },
+    { property: 'og:site_name', content: 'Primedev.pro' },
+    { property: 'og:locale', content: 'ru_RU' },
+    { name: 'robots', content: 'index, follow' },
+  ],
+})
+</script>
 
 <style lang="scss" scoped>
 .blog {

@@ -145,7 +145,33 @@
   </section>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+useHead({
+  title: 'Какой сайт лучше выбрать для вашего бизнеса? | Primedev.pro',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Разбираем, какой сайт подойдет вашему бизнесу: лендинг, корпоративный сайт, интернет-магазин или веб-приложение. Советы по выбору лучшего решения.',
+    },
+    {
+      property: 'og:title',
+      content: 'Какой сайт лучше выбрать для вашего бизнеса? | Primedev.pro',
+    },
+    {
+      property: 'og:description',
+      content:
+        'Какой тип сайта выбрать для бизнеса? Сравниваем разные варианты, их преимущества и недостатки.',
+    },
+    { property: 'og:type', content: 'article' },
+    { property: 'og:url', content: 'https://primedev.pro/blogs/2' },
+    // { property: 'og:image', content: 'https://primedev.pro/images/blog-site-selection.jpg' },
+    { property: 'og:site_name', content: 'Primedev.pro' },
+    { property: 'og:locale', content: 'ru_RU' },
+    { name: 'robots', content: 'index, follow' },
+  ],
+})
+</script>
 
 <style lang="scss" scoped>
 .blog {

@@ -144,6 +144,38 @@
 
 <script lang="ts" setup>
 import { BlogsHeader } from '#components'
+useHead({
+  title: 'Как привлечь новых клиентов на сайт в 2025 году? | Primedev.pro',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Эффективные стратегии интернет-маркетинга, SEO, контент-маркетинга и таргетированной рекламы для привлечения новых клиентов в 2025 году.',
+    },
+    {
+      property: 'og:title',
+      content:
+        'Как привлечь новых клиентов на сайт в 2025 году? | Primedev.pro',
+    },
+    {
+      property: 'og:description',
+      content:
+        'Рассказываем, как использовать современные digital-инструменты, чтобы увеличить трафик и конверсию на сайте в 2025 году.',
+    },
+    { property: 'og:type', content: 'article' },
+    {
+      property: 'og:url',
+      content: 'https://primedev.pro/blogs/1',
+    },
+    // {
+    //   property: 'og:image',
+    //   content: 'https://primedev.pro/images/blog-attract-clients.jpg',
+    // },
+    { property: 'og:site_name', content: 'Primedev.pro' },
+    { property: 'og:locale', content: 'ru_RU' },
+    { name: 'robots', content: 'index, follow' },
+  ],
+})
 </script>
 
 <style lang="scss" scoped>

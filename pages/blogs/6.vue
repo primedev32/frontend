@@ -112,7 +112,33 @@
   </section>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+useHead({
+  title: 'Как выбрать надежный хостинг для сайта? | Primedev.pro',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Узнайте, как выбрать лучший хостинг для вашего сайта. Советы по выбору хостинга, который обеспечит стабильную работу вашего онлайн-ресурса.',
+    },
+    {
+      property: 'og:title',
+      content: 'Как выбрать надежный хостинг для сайта? | Primedev.pro',
+    },
+    {
+      property: 'og:description',
+      content:
+        'Выбор хостинга — ключевая часть успешного веб-проекта. Узнайте, на что обратить внимание при выборе хостинга для вашего сайта.',
+    },
+    { property: 'og:type', content: 'article' },
+    { property: 'og:url', content: 'https://primedev.pro/blogs/6' },
+    // { property: 'og:image', content: 'https://primedev.pro/images/blog-reliable-hosting.jpg' },
+    { property: 'og:site_name', content: 'Primedev.pro' },
+    { property: 'og:locale', content: 'ru_RU' },
+    { name: 'robots', content: 'index, follow' },
+  ],
+})
+</script>
 
 <style lang="scss" scoped>
 .blog {

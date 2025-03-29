@@ -69,7 +69,33 @@
   </section>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+useHead({
+  title: 'Принципы хорошего веб-дизайна | Primedev.pro',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Изучите ключевые принципы хорошего веб-дизайна, которые помогают создавать удобные, функциональные и привлекательные сайты для бизнеса.',
+    },
+    {
+      property: 'og:title',
+      content: 'Принципы хорошего веб-дизайна | Primedev.pro',
+    },
+    {
+      property: 'og:description',
+      content:
+        'Дизайн — это не только красота, но и функциональность. Узнайте, какие принципы помогут вам создать эффективный веб-сайт для вашего бизнеса.',
+    },
+    { property: 'og:type', content: 'article' },
+    { property: 'og:url', content: 'https://primedev.pro/blogs/5' },
+    // { property: 'og:image', content: 'https://primedev.pro/images/blog-web-design-principles.jpg' },
+    { property: 'og:site_name', content: 'Primedev.pro' },
+    { property: 'og:locale', content: 'ru_RU' },
+    { name: 'robots', content: 'index, follow' },
+  ],
+})
+</script>
 
 <style lang="scss" scoped>
 .blog {

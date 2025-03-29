@@ -3,8 +3,16 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
   css: ['~/assets/scss/main.scss', 'swiper/swiper-bundle.css',],
+  site: { 
+    url: 'https://primedev.pro/', 
+    name: 'Primedev.pro' 
+    }, 
   modules: [
-    '@vueuse/nuxt', 'nuxt-swiper', '@vee-validate/nuxt', 'vue-yandex-maps/nuxt'
+    '@vueuse/nuxt',
+    'nuxt-swiper',
+    '@vee-validate/nuxt',
+    'vue-yandex-maps/nuxt',
+    '@nuxtjs/sitemap',
   ],
   build: {
     transpile: ['gsap'],
