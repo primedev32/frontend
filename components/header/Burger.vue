@@ -61,6 +61,7 @@ const scrollToSection = (id: string) => {
   .blur-background {
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
     height: 100%;
     padding: 200px 20px 20px;
     border-radius: 0 0 15px 15px;

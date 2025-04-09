@@ -90,6 +90,7 @@ const toggleBurger = () => {
   .blur-background {
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
     border-radius: 0px 0px 15px 15px;
     padding: 38px 0 36px 0;
   }
