@@ -21,7 +21,9 @@
               class="marketing__marketing-wrapper"
               :style="{
                 backgroundColor: item.backgroundColor,
-                // backgroundImage: `url(${item.backgroundImg})`,
+                backgroundImage: item.backgroundImg
+                  ? `url(${item.backgroundImg})`
+                  : '',
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',
               }"

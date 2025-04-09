@@ -1,6 +1,6 @@
 <template>
   <div class="burger" :class="{ open: isOpen }">
-    <div class="burger__wrapper">
+    <div class="blur-background burger__wrapper">
       <ul class="list-reset burger__list">
         <li v-for="(item, index) in navList" :key="index">
           <NuxtLink
@@ -44,14 +44,8 @@ const scrollToSection = (id: string) => {
 
 <style lang="scss" scoped>
 .burger {
-  background: rgb(163, 171, 166);
-  background: linear-gradient(
-    180deg,
-    rgba(163, 171, 166, 1) 0%,
-    rgba(0, 0, 0, 1) 100%
-  );
   transition: transform 0.3s ease-in-out;
-  z-index: 99;
+  z-index: -1;
   @media screen and (max-width: 913px) {
     height: 627px;
   }
@@ -64,7 +58,17 @@ const scrollToSection = (id: string) => {
   @media screen and (max-width: 463px) {
     height: 438px;
   }
+  .blur-background {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    height: 100%;
+    padding: 200px 20px 20px;
+    border-radius: 0 0 15px 15px;
 
+    @media screen and (max-width: 655px) {
+      padding-top: 150px;
+    }
+  }
   &__wrapper {
     padding: 180px 20px 20px 20px;
     @media screen and (max-width: 655px) {

@@ -44,6 +44,6 @@ export const marketingCard = [
     backgroundColor: '#222624 ',
     topBtn: '/svg/bool-2.svg ',
     hasBorder: true,
-    backgroundImg: '/img/marketing-2',
+    backgroundImg: '/img/marketing-2.webp',
   },
 ]

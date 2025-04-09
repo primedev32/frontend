@@ -1,27 +1,29 @@
 <template>
   <section class="header">
-    <div class="container">
-      <div class="header__wrapper">
-        <NuxtLink class="header__logo-link" to="/"
-          ><span class="header__logo">Primedev</span></NuxtLink
-        >
-        <nav class="header__nav">
-          <ul class="list-reset header__list">
-            <li v-for="(item, index) in navList" :key="index">
-              <NuxtLink :to="item.link" class="header__link">{{
-                item.title
-              }}</NuxtLink>
-            </li>
-          </ul>
-        </nav>
-        <NuxtLink @click="scrollToContacts" class="header__btn">
-          <span class="header__btn-text">Связаться с нами</span>
-        </NuxtLink>
-        <div class="header__burger" @click="toggleBurger">
-          <div class="header__burger-menu" :class="{ open: isOpen }">
-            <span></span>
-            <span></span>
-            <span></span>
+    <div class="blur-background">
+      <div class="container">
+        <div class="header__wrapper">
+          <NuxtLink class="header__logo-link" to="/"
+            ><span class="header__logo">Primedev</span></NuxtLink
+          >
+          <nav class="header__nav">
+            <ul class="list-reset header__list">
+              <li v-for="(item, index) in navList" :key="index">
+                <NuxtLink :to="item.link" class="header__link">{{
+                  item.title
+                }}</NuxtLink>
+              </li>
+            </ul>
+          </nav>
+          <NuxtLink @click="scrollToContacts" class="header__btn">
+            <span class="header__btn-text">Связаться с нами</span>
+          </NuxtLink>
+          <div class="header__burger" @click="toggleBurger">
+            <div class="header__burger-menu" :class="{ open: isOpen }">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
         </div>
       </div>
@@ -81,13 +83,15 @@ const toggleBurger = () => {
 <style lang="scss" scoped>
 .header {
   position: relative;
-  padding: 38px 0 36px 0;
-  border-radius: 0px 0px 15px 15px;
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(5px);
-  z-index: 100;
-  @media screen and (max-width: 655px) {
-    padding: 25px 0 25px 0;
+  z-index: 110;
+  // @media screen and (max-width: 655px) {
+  //   padding: 25px 0 25px 0;
+  // }
+  .blur-background {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    border-radius: 0px 0px 15px 15px;
+    padding: 38px 0 36px 0;
   }
   &__wrapper {
     display: flex;
@@ -105,7 +109,6 @@ const toggleBurger = () => {
     display: none;
     @media screen and (max-width: 1086px) {
       display: block;
-      z-index: 100;
     }
   }
   &__burger-mobile {
@@ -132,6 +135,7 @@ const toggleBurger = () => {
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
+    z-index: 999999999999;
     @media screen and (max-width: 913px) {
       height: 18px;
     }
