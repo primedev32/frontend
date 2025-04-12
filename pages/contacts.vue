@@ -2,7 +2,7 @@
   <div>
     <ContactsHero />
     <ContactsMap />
-    <CommonContacts :title="'оставляй заявку'" />
+    <CommonContacts :title="'оставляй заявку!'" />
   </div>
 </template>
 
