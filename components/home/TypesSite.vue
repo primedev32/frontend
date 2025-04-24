@@ -1,8 +1,8 @@
 <template>
   <section class="types-site">
     <div class="container">
-      <h2 class="types-site__title">сэкономим до 30%</h2>
-      <h2 class="types-site__title-2">бюджета и времени</h2>
+      <h2 class="types-site__title" ref="title1">сэкономим до 30%</h2>
+      <h2 class="types-site__title-2" ref="title2">бюджета и времени</h2>
       <ul class="list-reset types-site__list">
         <li
           v-for="(item, index) in typesList"
@@ -59,6 +59,9 @@
 </template>
 
 <script lang="ts" setup>
+const { $gsap } = useNuxtApp()
+const title1 = ref<HTMLElement | null>(null)
+const title2 = ref<HTMLElement | null>(null)
 const scrollToSection = (id: string) => {
   const element = document.getElementById(id)
   if (element) {
@@ -68,12 +71,53 @@ const scrollToSection = (id: string) => {
     })
   }
 }
+
+onMounted(() => {
+  $gsap.fromTo(
+    title1.value,
+    {
+      x: -200,
+      opacity: 0,
+    },
+    {
+      x: 0,
+      opacity: 1,
+      duration: 2,
+      ease: 'power4.out',
+      scrollTrigger: {
+        trigger: title1.value,
+        start: 'top 50%',
+        once: true,
+      },
+    }
+  )
+
+  $gsap.fromTo(
+    title2.value,
+    {
+      x: 200,
+      opacity: 0,
+    },
+    {
+      x: 0,
+      opacity: 1,
+      duration: 2,
+      ease: 'power4.out',
+      scrollTrigger: {
+        trigger: title2.value,
+        start: 'top 50%',
+        once: true,
+      },
+    }
+  )
+})
 </script>
 
 <style lang="scss" scoped>
 .types-site {
   padding: 130px 0;
   background: #fff;
+  overflow: hidden;
   @media screen and (max-width: 1500px) {
     padding: 100px 0;
   }

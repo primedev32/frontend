@@ -1,5 +1,5 @@
 <template>
-  <section class="adaptation">
+  <section class="adaptation" ref="progressSection">
     <div class="container">
       <div class="adaptation__wrapper">
         <div class="adaptation__image">
@@ -11,7 +11,7 @@
         </div>
         <div class="adaptation__content">
           <h2 class="adaptation__title">
-            более <span class="adaptation__title-span">85%</span>
+            более <span class="adaptation__title-span">{{ progress }} %</span>
           </h2>
           <p class="adaptation__description">
             Пользователей заходят на сайт с мобильных устройств, поэтому мы
@@ -23,7 +23,31 @@
   </section>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { ref, onMounted } from 'vue'
+
+const progress = ref(0)
+const progressSection = ref<HTMLElement | null>(null)
+
+onMounted(() => {
+  const { $gsap } = useNuxtApp()
+
+  if (progressSection.value) {
+    $gsap.to(progress, {
+      value: 80,
+      duration: 3,
+      ease: 'power1.inOut',
+      scrollTrigger: {
+        trigger: progressSection.value, // Секция, при видимости которой анимация запускается
+        start: 'top 80%', // Когда верхняя часть секции пересечет нижнюю границу экрана
+      },
+      onUpdate: () => {
+        progress.value = Math.round(progress.value)
+      },
+    })
+  }
+})
+</script>
 
 <style lang="scss" scoped>
 .adaptation {

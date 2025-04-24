@@ -6,6 +6,7 @@
           v-for="(item, index) in blogsList"
           :key="index"
           class="blogs__items-item"
+          ref="items"
         >
           <NuxtLink :to="`/blogs/${item.id}`" class="blogs__items-link">
             <div class="blogs__items-wrap">
@@ -23,7 +24,29 @@
   </section>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const { $gsap } = useNuxtApp()
+const items = ref<HTMLElement | null>(null)
+
+onMounted(() => {
+  // Анимация карточек
+  const items = document.querySelectorAll('.blogs__items-item')
+
+  items.forEach((item, index) => {
+    $gsap.from(item, {
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      delay: index * 0.1,
+      scrollTrigger: {
+        trigger: item,
+        start: 'top 80%',
+        toggleActions: 'play none none none',
+      },
+    })
+  })
+})
+</script>
 
 <style lang="scss" scoped>
 .blogs {

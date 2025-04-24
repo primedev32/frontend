@@ -2,8 +2,8 @@
   <section class="contacts" id="contacts">
     <div class="container contacts__wrapper" style="position: relative">
       <img class="contacts__img" src="/img/home-contacts.webp" alt="img" />
-      <h2 class="contacts__title">{{ title }}</h2>
-      <h3 class="contacts__subtitle">
+      <h2 class="contacts__title" ref="title1">{{ title }}</h2>
+      <h3 class="contacts__subtitle" ref="subtitle">
         Заполняй мини-бриф, и мы мчимся к тебе с ответом в считанные минуты
       </h3>
 
@@ -149,6 +149,10 @@
 import { useValidation } from '@/composables/useValidation'
 import { Form, Field } from 'vee-validate'
 
+const { $gsap } = useNuxtApp()
+const title1 = ref<HTMLElement | null>(null)
+const subtitle = ref<HTMLElement | null>(null)
+
 const textarea = ref('')
 const link = ref('')
 
@@ -195,6 +199,46 @@ const sendForm = async (values: any, { resetForm }: any) => {
 defineProps<{
   title: string
 }>()
+
+onMounted(() => {
+  $gsap.fromTo(
+    title1.value,
+    {
+      x: -500,
+      opacity: 0,
+    },
+    {
+      x: 0,
+      opacity: 1,
+      duration: 4,
+      ease: 'power4.out',
+      scrollTrigger: {
+        trigger: title1.value,
+        start: 'top 50%',
+        once: true,
+      },
+    }
+  )
+
+  $gsap.fromTo(
+    subtitle.value,
+    {
+      x: 500,
+      opacity: 0,
+    },
+    {
+      x: 0,
+      opacity: 1,
+      duration: 4,
+      ease: 'power4.out',
+      scrollTrigger: {
+        trigger: subtitle.value,
+        start: 'top 50%',
+        once: true,
+      },
+    }
+  )
+})
 </script>
 
 <style lang="scss" scoped>

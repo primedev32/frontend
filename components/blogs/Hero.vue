@@ -5,14 +5,60 @@
       <img class="blogs__img-1" src="/img/blogs-hero-1.webp" alt="img" />
       <img class="blogs__img-2" src="/img/blogs-hero-2.webp" alt="img" />
       <div class="blogs__wrapper-content">
-        <h1 class="blogs__title">Блог</h1>
-        <p class="blogs__description">Полезные статьи для вашего бизнеса</p>
+        <h1 class="blogs__title" ref="title">Блог</h1>
+        <p class="blogs__description" ref="description">
+          Полезные статьи для вашего бизнеса
+        </p>
       </div>
     </div>
   </section>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const { $gsap } = useNuxtApp()
+
+const title = ref<HTMLElement | null>(null)
+const description = ref<HTMLElement | null>(null)
+onMounted(() => {
+  $gsap.fromTo(
+    title.value,
+    {
+      x: -200,
+      opacity: 0,
+    },
+    {
+      x: 0,
+      opacity: 1,
+      duration: 2,
+      ease: 'power4.out',
+      scrollTrigger: {
+        trigger: title.value,
+        start: 'top 90%',
+        once: true,
+      },
+    }
+  )
+
+  $gsap.fromTo(
+    description.value,
+    {
+      x: 200,
+      opacity: 0,
+    },
+    {
+      x: 0,
+      opacity: 1,
+      duration: 2,
+      ease: 'power4.out',
+      scrollTrigger: {
+        trigger: description.value,
+        start: 'top 90%',
+        once: true,
+      },
+    }
+  )
+})
+</script>
 
 <style lang="scss" scoped>
 .blogs {

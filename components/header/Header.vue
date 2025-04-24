@@ -213,19 +213,55 @@ const toggleBurger = () => {
     }
   }
   &__btn {
+    position: relative;
     padding: 18px 50px;
     border-radius: 5px;
-    border: 1px solid #fff;
+
     cursor: pointer;
     transition: background 0.3s ease-in-out;
     &:hover {
       background: #ffffff4f;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      border: 2px solid transparent;
+      border-radius: 5px;
+      box-sizing: border-box;
+      pointer-events: none;
+      animation: borderSnake 2s linear infinite;
+      mask: linear-gradient(#ff0101 0 0) content-box,
+        linear-gradient(#ca1717 0 0);
+      mask-composite: exclude;
+      -webkit-mask-composite: xor;
     }
     @media screen and (max-width: 1500px) {
       padding: 10px 20px;
     }
     @media screen and (max-width: 1086px) {
       display: none;
+    }
+
+    @keyframes borderSnake {
+      0% {
+        border-image: linear-gradient(90deg, #e7ffff 0%, transparent 100%) 1;
+      }
+      25% {
+        border-image: linear-gradient(180deg, #e7ffff 0%, transparent 100%) 1;
+      }
+      50% {
+        border-image: linear-gradient(270deg, #e7ffff 0%, transparent 100%) 1;
+      }
+      75% {
+        border-image: linear-gradient(360deg, #e7ffff 0%, transparent 100%) 1;
+      }
+      100% {
+        border-image: linear-gradient(90deg, #e7ffff 0%, transparent 100%) 1;
+      }
     }
   }
   &__btn-text {

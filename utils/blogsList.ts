@@ -2,11 +2,11 @@
 export const blogsList = [
   {
     id: 1,
-    description: 'Какой тип сайта выбрать?',
+    description: 'Как привлечь клиентов на сайт в 2025 году',
   },
   {
     id: 2,
-    description: 'Как привлечь клиентов на сайт в 2025 году',
+    description: 'Какой тип сайта выбрать?',
   },
   {
     id: 3,

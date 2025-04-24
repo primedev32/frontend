@@ -13,6 +13,7 @@
           лендинг, корпоративный сайт, интернет-магазин или каталог. Разберёмся,
           какой формат подойдёт именно вам.
         </p>
+        <img src="/img/blog-2-0.jpg" alt="img" class="blog__img" />
         <h2 class="blog__subtitle">1. Лендинг (Landing Page)</h2>
         <p class="blog__description">
           Лендинг — это одностраничный сайт, сфокусированный на конкретном
@@ -270,6 +271,13 @@ useHead({
       border-radius: 50%;
       background-color: #e82626;
     }
+  }
+  &__img {
+    border-radius: 30px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
   }
 }
 </style>

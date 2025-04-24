@@ -5,19 +5,25 @@
         <div class="advantages__wrapper-1">
           <div class="advantages__content">
             <div class="advantages__description-wrapper">
-              <h3 class="advantages__description-title">20 дней</h3>
+              <h3 class="advantages__description-title">
+                <span ref="days">0</span> дней
+              </h3>
               <p class="advantages__description">
                 Средний срок запуска готового сайта
               </p>
             </div>
             <div class="advantages__description-wrapper">
-              <h3 class="advantages__description-title">100+</h3>
+              <h3 class="advantages__description-title">
+                <span ref="clients">0</span>+
+              </h3>
               <p class="advantages__description">
                 Наши клиенты довольны результатом
               </p>
             </div>
             <div class="advantages__description-wrapper">
-              <h3 class="advantages__description-title">5 лет</h3>
+              <h3 class="advantages__description-title">
+                <span ref="years">0</span> лет
+              </h3>
               <p class="advantages__description">
                 Опыта в разработке и веб-дизайне
               </p>
@@ -51,7 +57,38 @@
   </section>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const { $gsap } = useNuxtApp()
+
+const days = ref<HTMLElement | null>(null)
+const clients = ref<HTMLElement | null>(null)
+const years = ref<HTMLElement | null>(null)
+
+function animateCounters() {
+  $gsap.to(days.value, {
+    innerText: 20 + '+',
+    duration: 3,
+    snap: 'innerText',
+    ease: 'power1.out',
+  })
+  $gsap.to(clients.value, {
+    innerText: 100 + '+',
+    duration: 3.5,
+    snap: 'innerText',
+    ease: 'power1.out',
+  })
+  $gsap.to(years.value, {
+    innerText: 5,
+    duration: 3,
+    snap: 'innerText',
+    ease: 'power1.out',
+  })
+}
+
+onMounted(() => {
+  animateCounters()
+})
+</script>
 
 <style lang="scss" scoped>
 .advantages {

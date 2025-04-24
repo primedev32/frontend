@@ -13,6 +13,7 @@
           факторов, влияющих на пользовательский опыт. Рассмотрим основные
           принципы, которые помогут создать привлекательный и удобный сайт.
         </p>
+        <img src="/img/blog-5-0.jpg" alt="img" class="blog__img" />
         <h2 class="blog__subtitle">Простота</h2>
         <p class="blog__description">
           Простота — это основа успешного веб-дизайна. Избегайте избыточных
@@ -209,6 +210,13 @@ useHead({
       border-radius: 50%;
       background-color: #e82626;
     }
+  }
+  &__img {
+    border-radius: 30px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
   }
 }
 </style>

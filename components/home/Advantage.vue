@@ -1,8 +1,8 @@
 <template>
-  <section class="advantage">
+  <section class="advantage" ref="advantageSection">
     <div class="container">
       <div class="advantage__wrapper">
-        <div class="advantage__content-1">
+        <div class="advantage__content-1" ref="leftContent">
           <h2 class="advantage__title">Почему стоит работать с нами?</h2>
           <div class="advantage__img-wrapper">
             <img src="/img/advantage.webp" alt="img" class="advantage__img" />
@@ -62,21 +62,63 @@
   </section>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+// const content = ref(null)
+// const contentSection = ref(null)
+// onMounted(() => {
+//   $gsap.fromTo(
+//     content.value,
+//     {
+//       x: 200,
+//       opacity: 0,
+//     },
+//     {
+//       x: 0,
+//       opacity: 1,
+//       duration: 2.5,
+//       ease: 'power4.out',
+//       scrollTrigger: {
+//         trigger: content.value,
+//         start: 'top 50%',
+//         once: true,
+//       },
+//     }
+//   )
+// })
+
+const { $gsap } = useNuxtApp()
+
+const leftContent = ref<HTMLElement | null>(null)
+
+onMounted(() => {
+  if (!leftContent.value) return
+  $gsap.to(leftContent.value, {
+    y: 870,
+    ease: 'power2.out',
+    scrollTrigger: {
+      trigger: '.advantage',
+      start: 'top 0%',
+      end: 'bottom 10%',
+      scrub: 1,
+    },
+  })
+})
+</script>
 
 <style lang="scss" scoped>
 .advantage {
   position: relative;
   padding: 0 0 130px 0;
   transition: transform 0.2s ease-out;
-  height: 100%;
+
   @media screen and (max-width: 1500px) {
-    padding: 0 0 100px 0;
+    padding: 0 0 130px 0;
   }
   &__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
+    height: 100%;
     @media screen and (max-width: 817px) {
       grid-template-columns: 1fr;
     }
@@ -111,8 +153,9 @@
     gap: 30px;
   }
   &__content-1 {
-    height: 100%;
-    position: sticky;
+    width: 100%;
+    height: auto;
+    transition: transform 0.1s ease-out;
     @media screen and (max-width: 817px) {
       display: none;
     }
@@ -248,16 +291,16 @@
     top: 20%;
     left: -7%;
     display: block;
-    border-radius: 500px;
+    border-radius: 200px;
     background: rgba(255, 255, 255, 0.7);
     filter: blur(100px);
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     z-index: -2;
     @media screen and (max-width: 1500px) {
-      width: 400px;
-      height: 400px;
-      border-radius: 400px;
+      width: 200px;
+      height: 200px;
+      border-radius: 200px;
       top: 12%;
     }
   }

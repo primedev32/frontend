@@ -9,6 +9,7 @@
           бизнесе и онлайн-присутствии. Обсудим влияние дизайна на восприятие
           бренда.
         </h2>
+        <img src="/img/blog-4-0.jpg" alt="img" class="blog__img" />
         <p class="blog__description">
           В современном мире, где интернет стал неотъемлемой частью нашей жизни,
           качественный веб-дизайн играет важную роль в успехе бизнеса. Первое
@@ -200,6 +201,13 @@ useHead({
       border-radius: 50%;
       background-color: #e82626;
     }
+  }
+  &__img {
+    border-radius: 30px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
   }
 }
 </style>

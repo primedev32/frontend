@@ -11,6 +11,7 @@
           Рассмотрим ключевые критерии выбора хостинга, возможные варианты и
           преимущества, которые мы предлагаем нашим клиентам.
         </h2>
+        <img src="/img/blog-6-0.jpg" alt="img" class="blog__img" />
         <h3 class="blog__subtitle-2">1. Виды хостинга</h3>
         <p class="blog__description">
           Перед тем как выбрать хостинг, важно понять, какие типы серверов
@@ -252,6 +253,13 @@ useHead({
       border-radius: 50%;
       background-color: #e82626;
     }
+  }
+  &__img {
+    border-radius: 30px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
   }
 }
 </style>

@@ -16,6 +16,7 @@
           загружается или неудобен для мобильных пользователей — шансы потерять
           потенциального клиента возрастают многократно.
         </p>
+        <img src="/img/blog-3-0.png" alt="img" class="blog__img" />
         <h2 class="blog__subtitle">
           Как некачественный сайт влияет на ваш бизнес
         </h2>
@@ -56,7 +57,7 @@
           Наша команда создаёт современные, быстрые и удобные сайты, которые не
           просто представляют бизнес, но и помогают ему развиваться.
         </p>
-
+        <img src="/img/blog-3-1.jpg" alt="img" class="blog__img" />
         <h3 class="blog__subtitle-2">Что мы предлагаем?</h3>
 
         <p class="blog__description">
@@ -268,6 +269,13 @@ useHead({
       border-radius: 50%;
       background-color: #e82626;
     }
+  }
+  &__img {
+    border-radius: 30px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
   }
 }
 </style>

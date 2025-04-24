@@ -5,7 +5,7 @@
         Наши проекты: высокие результаты и
         <span class="projects__title-span">безупречное исполнение</span>
       </h2>
-      <div class="projects__wrapper-img">
+      <div class="projects__wrapper-img" ref="wrapperImg">
         <img src="/img/project-1.webp" alt="img" class="projects__img" />
         <div class="projects__img-content">
           <h3 class="projects__img-content-title">
@@ -21,7 +21,7 @@
           >
         </div>
       </div>
-      <ul class="list-reset projects__list">
+      <ul class="list-reset projects__list" ref="list">
         <li
           v-for="(item, index) in projectsList"
           :key="index"
@@ -45,11 +45,64 @@
   </section>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const { $gsap } = useNuxtApp()
+
+const list = ref<HTMLElement | null>(null)
+const wrapperImg = ref<HTMLElement | null>(null)
+
+onMounted(() => {
+  if (list.value) {
+    // Анимируем элементы списка с задержкой, начиная с боков
+    $gsap.fromTo(
+      list.value.children, // Получаем все li элементы внутри ul
+      {
+        x: 200, // Начальное положение слева
+        opacity: 0, // Начальная прозрачность
+      },
+      {
+        x: 0, // Конечное положение (в обычное место)
+        opacity: 1, // Полная видимость
+        duration: 1.9, // Длительность анимации
+        stagger: 0.5, // Задержка между анимациями элементов
+        ease: 'power4.out', // Плавное завершение
+        scrollTrigger: {
+          trigger: list.value, // Элемент, который будет инициировать анимацию
+          start: 'top 80%', // Когда верхний край элемента попадает в 80% экрана
+          once: true, // Анимация будет выполнена только один раз
+        },
+      }
+    )
+  }
+
+  if (wrapperImg.value) {
+    // Анимация для wrapper-img
+    $gsap.fromTo(
+      wrapperImg.value, // Получаем контейнер с изображениями
+      {
+        opacity: 0, // Начальная прозрачность
+        y: 100, // Начальное положение снизу
+      },
+      {
+        opacity: 1, // Конечная прозрачность
+        y: 0, // Конечное положение
+        duration: 1.5, // Длительность анимации
+        ease: 'power4.out', // Плавное завершение
+        scrollTrigger: {
+          trigger: wrapperImg.value, // Элемент, который будет инициировать анимацию
+          start: 'top 80%', // Когда верхний край элемента попадает в 80% экрана
+          once: true, // Анимация будет выполнена только один раз
+        },
+      }
+    )
+  }
+})
+</script>
 
 <style lang="scss" scoped>
 .projects {
   padding-bottom: 87px;
+  overflow: hidden;
   &__title {
     margin-bottom: 50px;
     color: #fff;

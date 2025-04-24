@@ -10,8 +10,8 @@
         />
         <div class="contacts__content">
           <div class="contacts__description-wrapper">
-            <h1 class="contacts__title">КОНТАКТЫ</h1>
-            <p class="contacts__description">
+            <h1 class="contacts__title" ref="title">КОНТАКТЫ</h1>
+            <p class="contacts__description" ref="description">
               Вы можете связаться с нами любым удобным способом
             </p>
           </div>
@@ -21,7 +21,51 @@
   </section>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const { $gsap } = useNuxtApp()
+
+const title = ref<HTMLElement | null>(null)
+const description = ref<HTMLElement | null>(null)
+onMounted(() => {
+  $gsap.fromTo(
+    title.value,
+    {
+      x: -200,
+      opacity: 0,
+    },
+    {
+      x: 0,
+      opacity: 1,
+      duration: 2,
+      ease: 'power4.out',
+      scrollTrigger: {
+        trigger: title.value,
+        start: 'top 90%',
+        once: true,
+      },
+    }
+  )
+
+  $gsap.fromTo(
+    description.value,
+    {
+      x: 200,
+      opacity: 0,
+    },
+    {
+      x: 0,
+      opacity: 1,
+      duration: 2,
+      ease: 'power4.out',
+      scrollTrigger: {
+        trigger: description.value,
+        start: 'top 90%',
+        once: true,
+      },
+    }
+  )
+})
+</script>
 
 <style lang="scss" scoped>
 .contacts {
@@ -125,7 +169,7 @@
     }
     @media screen and (max-width: 655px) {
       min-width: 500px;
-      transform: translate(-50%, -47%);
+      transform: translate(-50%, -44%);
     }
     @media screen and (max-width: 463px) {
       min-width: 450px;

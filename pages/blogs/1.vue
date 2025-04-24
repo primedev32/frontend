@@ -15,6 +15,7 @@
           статье мы обсудим, какие методы привлечения клиентов актуальны в 2025
           году, и как эффективно использовать инструменты для роста бизнеса.
         </p>
+        <img src="/img/blog-1-0.png" alt="img" class="blog__img" />
         <h2 class="blog__subtitle">
           1. Исследуйте и поймите вашу целевую аудиторию
         </h2>
@@ -111,6 +112,9 @@
           На сайте стоит добавить формы для сбора контактов, а также раздел с
           контактными данными вашего бизнеса.
         </p>
+        <div class="blog__img-wrapper">
+          <img src="/img/blog-1-1.png" alt="img" class="blog__img" />
+        </div>
         <h2 class="blog__subtitle">
           4. Используйте рекламу и социальные сети для привлечения аудитории
         </h2>
@@ -275,6 +279,13 @@ useHead({
       border-radius: 50%;
       background-color: #e82626;
     }
+  }
+  &__img {
+    border-radius: 30px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
   }
 }
 </style>

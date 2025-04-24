@@ -1,43 +1,46 @@
 <template>
   <section class="hero">
-    <Header />
-    <div class="hero__video-wrapper">
-      <video class="hero__video" autoplay muted loop>
-        <source src="/video/home-hero.mp4" type="video/mp4" />
-        Ваш браузер не поддерживает видео.
-      </video>
-      <picture class="hero__overlay">
-        <img class="hero__image" src="/img/home-hero.webp" alt="Hero" />
-      </picture>
-    </div>
-    <div class="container">
-      <div class="hero__content">
-        <span class="hero__subtitle">Профессиональная веб-студия</span>
-        <h1 class="hero__title">РАЗРАБОТКА САЙТОВ БЕЗ ОГРАНИЧЕНИЙ</h1>
-        <p class="hero__description">
-          Большинство сайтов теряют клиентов из-за медленной загрузки и
-          неудобного интерфейса. Мы создаем современные, быстрые и адаптивные
-          сайты, которые не только привлекают внимание, но и превращают
-          посетителей в ваших клиентов.
-        </p>
-        <button
-          @click="scrollToSection('contacts')"
-          class="btn-reset hero__btn"
-        >
-          <span class="hero__btn-text">Создать сайт</span>
-        </button>
+    <div class="blur-background">
+      <Header />
+      <div class="hero__video-wrapper">
+        <video class="hero__video" autoplay muted loop>
+          <source src="/video/home-hero.mp4" type="video/mp4" />
+          Ваш браузер не поддерживает видео.
+        </video>
+        <picture class="hero__overlay">
+          <img class="hero__image" src="/img/home-hero.webp" alt="Hero" />
+        </picture>
       </div>
-      <div class="hero__stats">
-        <span class="hero__stats-text">Более 100</span>
-        <span class="hero__stats-text-2"
-          >сайтов успешно запущены и приносят прибыль своим владельцам</span
-        >
+      <div class="container">
+        <div class="hero__content">
+          <span class="hero__subtitle">Профессиональная веб-студия</span>
+          <h1 class="hero__title">РАЗРАБОТКА САЙТОВ БЕЗ ОГРАНИЧЕНИЙ</h1>
+          <p class="hero__description">
+            Большинство сайтов теряют клиентов из-за медленной загрузки и
+            неудобного интерфейса. Мы создаем современные, быстрые и адаптивные
+            сайты, которые не только привлекают внимание, но и превращают
+            посетителей в ваших клиентов.
+          </p>
+          <button
+            @click="scrollToSection('contacts')"
+            class="btn-reset hero__btn"
+          >
+            <span class="hero__btn-text">Создать сайт</span>
+          </button>
+        </div>
+        <div class="hero__stats">
+          <span class="hero__stats-text">Более 100</span>
+          <span class="hero__stats-text-2"
+            >сайтов успешно запущены и приносят прибыль своим владельцам</span
+          >
+        </div>
       </div>
     </div>
   </section>
 </template>
 
 <script lang="ts" setup>
+const { $gsap } = useNuxtApp()
 const scrollToSection = (id: string) => {
   const element = document.getElementById(id)
   if (element) {
@@ -47,6 +50,38 @@ const scrollToSection = (id: string) => {
     })
   }
 }
+
+onMounted(() => {
+  const content = document.querySelector('.hero__content')
+  if (content) {
+    $gsap.from(content, {
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      delay: 0.3,
+    })
+  }
+
+  const btn = document.querySelector('.hero__btn')
+  if (btn) {
+    $gsap.from(btn, {
+      opacity: 0,
+      y: 20,
+      duration: 1,
+      delay: 0.7,
+    })
+  }
+
+  const stats = document.querySelector('.hero__stats')
+  if (stats) {
+    $gsap.from(stats, {
+      opacity: 0,
+      x: -50,
+      duration: 1,
+      delay: 1,
+    })
+  }
+})
 </script>
 
 <style lang="scss" scoped>
@@ -55,7 +90,6 @@ const scrollToSection = (id: string) => {
   width: 100%;
   min-height: 950px;
   position: relative;
-  overflow: hidden;
   @media screen and (max-width: 1500px) {
     margin-bottom: 100px;
   }
@@ -249,4 +283,15 @@ const scrollToSection = (id: string) => {
     line-height: 120%; /* 21.6px */
   }
 }
+// .blur-background {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   z-index: -1;
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+// }
 </style>

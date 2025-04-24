@@ -1,8 +1,10 @@
 <template>
   <section class="marketing">
     <div class="container">
-      <h2 class="marketing__title">Индивидуальный подход к созданию сайта</h2>
-      <p class="marketing__description">
+      <h2 class="marketing__title" ref="title">
+        Индивидуальный подход к созданию сайта
+      </h2>
+      <p class="marketing__description" ref="description">
         Создаем уникальные сайты, полностью адаптированные под ваш бизнес,
         опираясь на глубокий маркетинговый анализ, который помогает выделиться
         среди конкурентов.
@@ -69,6 +71,10 @@
 </template>
 
 <script lang="ts" setup>
+const { $gsap } = useNuxtApp()
+
+const title = ref<HTMLElement | null>(null)
+const description = ref<HTMLElement | null>(null)
 const swiperRef = ref<any>(null)
 const slidesPerView = ref()
 
@@ -98,6 +104,46 @@ const handleClickNext = () => {
     swiperRef.value.slideNext()
   }
 }
+
+onMounted(() => {
+  $gsap.fromTo(
+    title.value,
+    {
+      x: -200,
+      opacity: 0,
+    },
+    {
+      x: 0,
+      opacity: 1,
+      duration: 2,
+      ease: 'power4.out',
+      scrollTrigger: {
+        trigger: title.value,
+        start: 'top 50%',
+        once: true,
+      },
+    }
+  )
+
+  $gsap.fromTo(
+    description.value,
+    {
+      x: 200,
+      opacity: 0,
+    },
+    {
+      x: 0,
+      opacity: 1,
+      duration: 2,
+      ease: 'power4.out',
+      scrollTrigger: {
+        trigger: description.value,
+        start: 'top 50%',
+        once: true,
+      },
+    }
+  )
+})
 </script>
 
 <style lang="scss" scoped>

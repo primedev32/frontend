@@ -1,7 +1,7 @@
 <template>
   <section class="reviews">
     <div class="container">
-      <h2 class="reviews__title">Мнение наших клиентов</h2>
+      <h2 class="reviews__title" ref="title">Мнение наших клиентов</h2>
       <div class="reviews__wrapper">
         <CommonSwiper
           :slidesperview="slidesPerView"
@@ -52,6 +52,9 @@
 </template>
 
 <script lang="ts" setup>
+const { $gsap } = useNuxtApp()
+
+const title = ref<HTMLElement | null>(null)
 const swiperRef = ref<any>(null)
 const slidesPerView = ref()
 
@@ -91,6 +94,27 @@ const handleClickNext = () => {
     swiperRef.value.slideNext()
   }
 }
+
+onMounted(() => {
+  $gsap.fromTo(
+    title.value,
+    {
+      x: 200,
+      opacity: 0,
+    },
+    {
+      x: 0,
+      opacity: 1,
+      duration: 2,
+      ease: 'power4.out',
+      scrollTrigger: {
+        trigger: title.value,
+        start: 'top 50%',
+        once: true,
+      },
+    }
+  )
+})
 </script>
 
 <style lang="scss" scoped>

@@ -6,8 +6,10 @@
     </div>
     <div class="container" style="position: relative">
       <div class="about__description-wrapper">
-        <h2 class="about__title">PrimeDev — больше, чем просто разработка</h2>
-        <p class="about__description">
+        <h2 class="about__title" ref="title">
+          PrimeDev — больше, чем просто разработка
+        </h2>
+        <p class="about__description" ref="description">
           Мы создаем не просто сайты, а мощные инструменты для роста вашего
           бизнеса. Воплощаем идеи в качественные digital-решения, которые
           работают на результат.
@@ -17,7 +19,51 @@
   </section>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const { $gsap } = useNuxtApp()
+
+const title = ref<HTMLElement | null>(null)
+const description = ref<HTMLElement | null>(null)
+onMounted(() => {
+  $gsap.fromTo(
+    title.value,
+    {
+      x: -200,
+      opacity: 0,
+    },
+    {
+      x: 0,
+      opacity: 1,
+      duration: 2,
+      ease: 'power4.out',
+      scrollTrigger: {
+        trigger: title.value,
+        start: 'top 90%',
+        once: true,
+      },
+    }
+  )
+
+  $gsap.fromTo(
+    description.value,
+    {
+      x: 200,
+      opacity: 0,
+    },
+    {
+      x: 0,
+      opacity: 1,
+      duration: 2,
+      ease: 'power4.out',
+      scrollTrigger: {
+        trigger: description.value,
+        start: 'top 90%',
+        once: true,
+      },
+    }
+  )
+})
+</script>
 
 <style lang="scss" scoped>
 .about {
@@ -67,7 +113,7 @@
     }
     @media screen and (max-width: 463px) {
       max-width: 300px;
-      transform: translate(0%, -28%);
+      transform: translate(0%, -37%);
     }
   }
   &__description-wrapper {
@@ -84,7 +130,7 @@
       padding: 0 15px;
     }
     @media screen and (max-width: 463px) {
-      transform: translate(0%, 170px);
+      transform: translate(0%, 152px);
     }
   }
   &__title {
