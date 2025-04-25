@@ -90,6 +90,7 @@ onMounted(() => {
   width: 100%;
   min-height: 950px;
   position: relative;
+  overflow: hidden;
   @media screen and (max-width: 1500px) {
     margin-bottom: 100px;
   }
