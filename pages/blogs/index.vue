@@ -2,6 +2,7 @@
   <div>
     <BlogsHero />
     <BlogsItems />
+    <Footer />
   </div>
 </template>
 

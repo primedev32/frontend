@@ -124,6 +124,7 @@
         </ul>
       </div>
     </div>
+    <Footer />
   </section>
 </template>
 

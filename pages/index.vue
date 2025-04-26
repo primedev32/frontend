@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <CommonLoadPage v-if="loading" />
+  <div v-else>
     <HomeHero />
     <HomeAdvantage />
     <HomeProjects />
@@ -7,6 +8,7 @@
     <HomeMarketing />
     <HomeReviews />
     <CommonContacts :title="'Начнём работу?'" />
+    <Footer />
   </div>
 </template>
 
@@ -36,6 +38,24 @@ useHead({
     { name: 'robots', content: 'index, follow' },
   ],
 })
+
+const hasLoadedCookie = useCookie<boolean>('hasLoaded', {
+  maxAge: 60 * 20,
+})
+
+const loading = ref(!hasLoadedCookie.value)
+if (!hasLoadedCookie.value) {
+  onMounted(() => {
+    if (hasLoadedCookie.value) {
+      loading.value = false
+    } else {
+      setTimeout(() => {
+        loading.value = false
+        hasLoadedCookie.value = true
+      }, 2000)
+    }
+  })
+}
 </script>
 
 <style></style>

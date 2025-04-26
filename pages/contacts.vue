@@ -3,6 +3,7 @@
     <ContactsHero />
     <ContactsMap />
     <CommonContacts :title="'оставляй заявку!'" />
+    <Footer />
   </div>
 </template>
 

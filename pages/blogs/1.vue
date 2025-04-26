@@ -143,6 +143,7 @@
         </p>
       </div>
     </div>
+    <Footer />
   </section>
 </template>
 

@@ -4,6 +4,7 @@
     <AboutAdvantages />
     <AboutAdaptation />
     <CommonContacts :title="'Начнём работу?'" />
+    <Footer />
   </div>
 </template>
 

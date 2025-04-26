@@ -30,7 +30,14 @@
             /></a>
           </li>
         </ul>
-        <a href="tel:+79996211951" class="footer__phone">+7 (999) 621-19-51</a>
+        <div class="footer__contacts">
+          <a href="tel:+79996211951" class="footer__phone"
+            >+7 (999) 621-19-51</a
+          >
+          <a href="mailto:support@primedev.pro" class="footer__phone"
+            >support@primedev.pro</a
+          >
+        </div>
       </div>
       <h2 class="footer__title-2">Primedev</h2>
     </div>
@@ -228,6 +235,11 @@
       width: 25px;
       height: auto;
     }
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 }
 </style>
