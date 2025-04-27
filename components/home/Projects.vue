@@ -2,22 +2,22 @@
   <section class="projects">
     <div class="container">
       <h2 class="projects__title">
-        Наши проекты: высокие результаты и
-        <span class="projects__title-span">безупречное исполнение</span>
+        {{ $t('home-projects.title') }}
+        <span class="projects__title-span">{{ $t('home-projects.span') }}</span>
       </h2>
       <div class="projects__wrapper-img" ref="wrapperImg">
         <img src="/img/project-1.webp" alt="img" class="projects__img" />
         <div class="projects__img-content">
           <h3 class="projects__img-content-title">
-            Корпоративный сайт для компании «Zero Hawk», 2024
+            {{ $t('home-projects.card-1') }}
           </h3>
           <a
             href="https://t.me/primedevsite"
             target="_blank"
             class="projects__img-content-link"
             ><span class="projects__img-content-link-text"
-              >Посмотреть проект</span
-            ></a
+              >{{ $t('home-projects.button') }}
+            </span></a
           >
         </div>
       </div>
@@ -29,14 +29,16 @@
         >
           <img :src="item.img" alt="img" class="projects__item-img" />
           <div class="projects__item-content">
-            <h3 class="projects__item-content-title">{{ item.title }}</h3>
+            <h3 class="projects__item-content-title">
+              {{ $t(`home-projects.${item.title}`) }}
+            </h3>
             <a
               :href="item.link"
               target="_blank"
               class="projects__item-content-link"
-              ><span class="projects__item-content-link-text"
-                >Посмотреть проект</span
-              ></a
+              ><span class="projects__item-content-link-text">{{
+                $t('home-projects.button')
+              }}</span></a
             >
           </div>
         </li>

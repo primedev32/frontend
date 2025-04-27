@@ -3,16 +3,18 @@
     <div class="container">
       <div class="advantage__wrapper">
         <div class="advantage__content-1" ref="leftContent">
-          <h2 class="advantage__title">Почему стоит работать с нами?</h2>
+          <h2 class="advantage__title">
+            {{ $t('home-advantage.title') }}
+          </h2>
           <div class="advantage__img-wrapper">
             <img src="/img/advantage.webp" alt="img" class="advantage__img" />
             <span class="advantage__img-shadow"></span>
           </div>
           <div class="advantage__wrapper-btn">
-            <NuxtLink to="/about" class="advantage__btn"
-              ><span class="advantage__btn-text"
-                >Узнать о компании больше</span
-              ></NuxtLink
+            <NuxtLinkLocale to="/about" class="advantage__btn"
+              ><span class="advantage__btn-text">
+                {{ $t('home-advantage.btn-text') }}</span
+              ></NuxtLinkLocale
             >
             <img
               src="/img/home-arrow.webp"
@@ -22,7 +24,9 @@
           </div>
         </div>
         <div class="advantage__content-817">
-          <h2 class="advantage__title">Почему стоит работать с нами?</h2>
+          <h2 class="advantage__title">
+            {{ $t('home-advantage.title') }}
+          </h2>
           <img class="advantage__img-817" src="/img/advantage.webp" alt="img" />
         </div>
         <div class="advantage__content">
@@ -45,13 +49,13 @@
                   class="advantage__item-title"
                   :style="{ color: item.titleColor }"
                 >
-                  {{ item.title }}
+                  {{ $t(`home-advantage.${item.title}`) }}
                 </h3>
                 <p
                   class="advantage__item-description"
                   :style="{ color: item.descriptionColor }"
                 >
-                  {{ item.description }}
+                  {{ $t(`home-advantage.${item.description}`) }}
                 </p>
               </div>
             </li>

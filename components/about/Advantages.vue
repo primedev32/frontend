@@ -6,10 +6,10 @@
           <div class="advantages__content">
             <div class="advantages__description-wrapper">
               <h3 class="advantages__description-title">
-                <span ref="days">0</span> дней
+                <span ref="days">0</span> {{ $t('about.advantages-days') }}
               </h3>
               <p class="advantages__description">
-                Средний срок запуска готового сайта
+                {{ $t('about.advantages-days-text') }}
               </p>
             </div>
             <div class="advantages__description-wrapper">
@@ -17,15 +17,15 @@
                 <span ref="clients">0</span>+
               </h3>
               <p class="advantages__description">
-                Наши клиенты довольны результатом
+                {{ $t('about.advantages-clients') }}
               </p>
             </div>
             <div class="advantages__description-wrapper">
               <h3 class="advantages__description-title">
-                <span ref="years">0</span> лет
+                <span ref="years">0</span> {{ $t('about.advantages-years') }}
               </h3>
               <p class="advantages__description">
-                Опыта в разработке и веб-дизайне
+                {{ $t('about.advantages-years-text') }}
               </p>
             </div>
           </div>
@@ -47,7 +47,7 @@
                 :style="{ color: item.color }"
                 class="advantages__item-description"
               >
-                {{ item.description }}
+                {{ $t(`about.${item.description}`) }}
               </p>
             </li>
           </ul>

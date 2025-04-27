@@ -1,7 +1,7 @@
 <template>
   <section class="reviews">
     <div class="container">
-      <h2 class="reviews__title" ref="title">Мнение наших клиентов</h2>
+      <h2 class="reviews__title" ref="title">{{ $t('reviews.title') }}</h2>
       <div class="reviews__wrapper">
         <CommonSwiper
           :slidesperview="slidesPerView"
@@ -20,10 +20,10 @@
                 class="reviews__swiper-avatar"
               />
               <p class="reviews__swiper-description">
-                {{ item.description }}
+                {{ $t(`reviews.${item.description}`) }}
               </p>
               <h3 class="reviews__swiper-title">
-                {{ item.name }}
+                {{ $t(`reviews.${item.name}`) }}
               </h3>
             </div>
           </template></CommonSwiper

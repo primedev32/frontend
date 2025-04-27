@@ -2,26 +2,26 @@
 export const blogsList = [
   {
     id: 1,
-    description: 'Как привлечь клиентов на сайт в 2025 году',
+    description: 'blog-card-1',
   },
   {
     id: 2,
-    description: 'Какой тип сайта выбрать?',
+    description: 'blog-card-2',
   },
   {
     id: 3,
-    description: 'Почему ваш бизнес теряет клиентов без сайта – и как это исправить',
+    description: 'blog-card-3',
   },
   {
     id: 4,
-    description: 'Зачем вообще нужен веб-дизайн бизнесу?',
+    description: 'blog-card-4',
   },
   {
     id: 5,
-    description: 'Принципы хорошего веб-дизайна',
+    description: 'blog-card-5',
   },
   {
     id: 6,
-    description: 'Как выбрать надежный хостинг для сайта?',
+    description: 'blog-card-6',
   },
 ]

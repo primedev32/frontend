@@ -2,12 +2,10 @@
   <section class="marketing">
     <div class="container">
       <h2 class="marketing__title" ref="title">
-        Индивидуальный подход к созданию сайта
+        {{ $t('marketing.title') }}
       </h2>
       <p class="marketing__description" ref="description">
-        Создаем уникальные сайты, полностью адаптированные под ваш бизнес,
-        опираясь на глубокий маркетинговый анализ, который помогает выделиться
-        среди конкурентов.
+        {{ $t('marketing.description') }}
       </p>
       <div class="btn-reset marketing__wrapper">
         <CommonSwiper
@@ -42,13 +40,13 @@
                 class="marketing__swiper-title"
                 :style="{ color: item.colorTitle }"
               >
-                {{ item.title }}
+                {{ $t(`marketing.${item.title}`) }}
               </h3>
               <p
                 class="marketing__swiper-description"
                 :style="{ color: item.colorDescription }"
               >
-                {{ item.description }}
+                {{ $t(`marketing.${item.description}`) }}
               </p>
             </div>
           </template></CommonSwiper

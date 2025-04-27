@@ -3,26 +3,31 @@
     <div class="blur-background">
       <div class="container">
         <div class="header__wrapper">
-          <NuxtLink class="header__logo-link" to="/"
-            ><span class="header__logo">Primedev</span></NuxtLink
+          <NuxtLinkLocale class="header__logo-link" to="/"
+            ><span class="header__logo">Primedev</span></NuxtLinkLocale
           >
           <nav class="header__nav">
             <ul class="list-reset header__list">
               <li v-for="(item, index) in navList" :key="index">
-                <NuxtLink :to="item.link" class="header__link">{{
-                  item.title
-                }}</NuxtLink>
+                <NuxtLinkLocale :to="item.link" class="header__link">{{
+                  $t(`header.${item.title}`)
+                }}</NuxtLinkLocale>
               </li>
             </ul>
           </nav>
-          <NuxtLink @click="scrollToContacts" class="header__btn">
-            <span class="header__btn-text">Связаться с нами</span>
-          </NuxtLink>
-          <div class="header__burger" @click="toggleBurger">
-            <div class="header__burger-menu" :class="{ open: isOpen }">
-              <span></span>
-              <span></span>
-              <span></span>
+          <div class="header__menu">
+            <CommonSwitchLang colorClass="header__switch-lang" />
+            <NuxtLinkLocale @click="scrollToContacts" class="header__btn">
+              <span class="header__btn-text">
+                {{ $t(`header.button`) }}
+              </span>
+            </NuxtLinkLocale>
+            <div class="header__burger" @click="toggleBurger">
+              <div class="header__burger-menu" :class="{ open: isOpen }">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
             </div>
           </div>
         </div>
@@ -43,7 +48,7 @@
 import { HeaderBurger } from '#components'
 
 const { $gsap } = useNuxtApp()
-
+const { locale } = useI18n()
 const scrollToContacts = async () => {
   const section = document.getElementById('contacts')
 
@@ -54,7 +59,15 @@ const scrollToContacts = async () => {
       ease: 'power2.out',
     })
   } else {
-    await navigateTo('/')
+    const loc = locale.value
+    if (loc === 'en') {
+      await navigateTo(`/${loc}/contacts`)
+    } else {
+      locale.value = ''
+      await navigateTo(`/contacts`)
+    }
+
+    // Переходим на страницу контактов с сохранением локал
     await nextTick()
     const mainSection = document.getElementById('contacts')
     if (mainSection) {
@@ -275,6 +288,14 @@ const toggleBurger = () => {
     @media screen and (max-width: 1500px) {
       font-size: 18px;
     }
+  }
+  &__switch-lang {
+    color: #000;
+  }
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
   }
 }
 .slide-enter-active,

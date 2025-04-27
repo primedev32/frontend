@@ -3,12 +3,12 @@
     <div class="blur-background burger__wrapper">
       <ul class="list-reset burger__list">
         <li v-for="(item, index) in navList" :key="index">
-          <NuxtLink
+          <NuxtLinkLocale
             :to="item.link"
             class="burger__link"
             @click="emit('closeBurger')"
             >{{ item.title }}
-          </NuxtLink>
+          </NuxtLinkLocale>
         </li>
       </ul>
       <button class="btn-reset burger__btn">

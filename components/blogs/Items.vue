@@ -8,16 +8,18 @@
           class="blogs__items-item"
           ref="items"
         >
-          <NuxtLink :to="`/blogs/${item.id}`" class="blogs__items-link">
+          <NuxtLinkLocale :to="`/blogs/${item.id}`" class="blogs__items-link">
             <div class="blogs__items-wrap">
-              <p class="blogs__items-description">{{ item.description }}</p>
+              <p class="blogs__items-description">
+                {{ $t(`blog.${item.description}`) }}
+              </p>
               <img
                 src="/img/blogs-items-card.webp"
                 alt="img"
                 class="blogs__items-card"
               />
             </div>
-          </NuxtLink>
+          </NuxtLinkLocale>
         </li>
       </ul>
     </div>

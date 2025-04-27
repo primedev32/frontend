@@ -1,8 +1,8 @@
 export const advantageList = [
   {
     number: '1',
-    title: 'без ограничений и скучных конструкторов',
-    description: 'Создаем сайты с гибким кодом и высокой скоростью загрузки, избегая шаблонов.',
+    title: 'card-title-1',
+    description: 'card-description-1',
     titleColor: '#000',
     descriptionColor: '#000',
     numberColor: '#000',
@@ -11,8 +11,8 @@ export const advantageList = [
   },
   {
     number: '2',
-    title: '100+ крутых проектов в портфолио',
-    description: 'За 5 лет мы реализовали более 100 проектов, решая задачи бизнеса в разных нишах и находя лучшие решения для каждого клиента.',
+    title: 'card-title-2',
+    description: 'card-description-2',
     titleColor: '#FFF',
     descriptionColor: '#FFF',
     numberColor: '#FFF',
@@ -21,8 +21,8 @@ export const advantageList = [
   },
   {
     number: '3',
-    title: 'Моментальная загрузка без потери клиентов',
-    description: 'Сайт загружается менее 1 секунды — это значит больше клиентов и заявок без потерь из-за медленного отклика.',
+    title: 'card-title-3',
+    description: 'card-description-3',
     titleColor: '#FFF',
     descriptionColor: '#FFF',
     numberColor: '#FFF',
@@ -31,8 +31,8 @@ export const advantageList = [
   },
   {
     number: '4',
-    title: 'Простая админка — редактируйте сами',
-    description: 'Мы настраиваем удобную админ-панель, позволяющую легко управлять страницами, редактировать тексты и обновлять изображения всего в пару кликов.',
+    title: 'card-title-4',
+    description: 'card-description-4',
     titleColor: '#000',
     descriptionColor: '#000',
     numberColor: '#000',

@@ -11,11 +11,11 @@
         </div>
         <div class="adaptation__content">
           <h2 class="adaptation__title">
-            более <span class="adaptation__title-span">{{ progress }} %</span>
+            {{ $t('about.adaptation-title') }}
+            <span class="adaptation__title-span">{{ progress }} %</span>
           </h2>
           <p class="adaptation__description">
-            Пользователей заходят на сайт с мобильных устройств, поэтому мы
-            уделяем особое внимание адаптивности и удобству интерфейса.
+            {{ $t('about.adaptation-description') }}
           </p>
         </div>
       </div>

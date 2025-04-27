@@ -5,9 +5,9 @@
       <img class="blogs__img-1" src="/img/blogs-hero-1.webp" alt="img" />
       <img class="blogs__img-2" src="/img/blogs-hero-2.webp" alt="img" />
       <div class="blogs__wrapper-content">
-        <h1 class="blogs__title" ref="title">Блог</h1>
+        <h1 class="blogs__title" ref="title">{{ $t('blog.title') }}</h1>
         <p class="blogs__description" ref="description">
-          Полезные статьи для вашего бизнеса
+          {{ $t('blog.description') }}
         </p>
       </div>
     </div>

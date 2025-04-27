@@ -1,22 +1,22 @@
 export const projectsList = [
   {
     img: '/img/project-2.webp',
-    title: 'Интернет-магазин «ПромСнаб», 2025',
+    title: 'project-2',
     link: 'https://t.me/primedevsite',
   },
   {
     img: '/img/project-3.webp',
-    title: 'Корпоративный сайт «Pilates Montreux», 2024',
+    title: 'project-3',
     link: 'https://t.me/primedevsite',
   },
   {
     img: '/img/project-4.webp',
-    title: 'Сайт туристической компании «Lagoona», 2024',
+    title: 'project-4',
     link: 'https://t.me/primedevsite',
   },
   {
     img: '/img/project-5.webp',
-    title: 'Лендинг для компании «Евклид», 2023',
+    title: 'project-5',
     link: 'https://t.me/primedevsite',
   },
 ]

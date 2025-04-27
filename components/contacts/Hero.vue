@@ -10,9 +10,11 @@
         />
         <div class="contacts__content">
           <div class="contacts__description-wrapper">
-            <h1 class="contacts__title" ref="title">КОНТАКТЫ</h1>
+            <h1 class="contacts__title" ref="title">
+              {{ $t('contact-page.title') }}
+            </h1>
             <p class="contacts__description" ref="description">
-              Вы можете связаться с нами любым удобным способом
+              {{ $t('contact-page.description') }}
             </p>
           </div>
         </div>

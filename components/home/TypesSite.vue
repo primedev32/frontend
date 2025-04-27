@@ -1,8 +1,12 @@
 <template>
   <section class="types-site">
     <div class="container">
-      <h2 class="types-site__title" ref="title1">сэкономим до 30%</h2>
-      <h2 class="types-site__title-2" ref="title2">бюджета и времени</h2>
+      <h2 class="types-site__title" ref="title1">
+        {{ $t('types-site.title1') }}
+      </h2>
+      <h2 class="types-site__title-2" ref="title2">
+        {{ $t('types-site.title2') }}
+      </h2>
       <ul class="list-reset types-site__list">
         <li
           v-for="(item, index) in typesList"
@@ -26,13 +30,13 @@
             class="types-site__item-title"
             :style="{ color: item.colorTitle }"
           >
-            {{ item.title }}
+            {{ $t(`types-site.${item.title}`) }}
           </h3>
           <p
             class="types-site__item-description"
             :style="{ color: item.colorDescription }"
           >
-            {{ item.description }}
+            {{ $t(`types-site.${item.description}`) }}
           </p>
 
           <div class="types-site__item-wrapper">
@@ -49,7 +53,7 @@
                 color: item.colorBtn,
               }"
             >
-              Заказать сайт
+              {{ $t(`types-site.button`) }}
             </button>
           </div>
         </li>

@@ -1,19 +1,19 @@
 export const navList = [
   {
-    title: 'Главная',
+    title: 'title1',
     link: '/',
   },
   {
-    title: 'О компании',
+    title: 'title2',
     link: '/about',
   },
   {
 
-    title: 'Блог',
+    title: 'title3',
     link: '/blogs',
   },
   {
-    title: 'Контакты',
+    title: 'title4',
     link: '/contacts',
   }
 ]

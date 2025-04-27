@@ -4,121 +4,102 @@
     <div class="blog__container">
       <div class="blog__wrapper">
         <h1 class="blog__title">
-          Почему без современного сайта ваш бизнес теряет клиентов и как это
-          исправить
+          {{ $t('blog-3.title') }}
         </h1>
         <h2 class="blog__subtitle">
-          Веб-сайт — лицо вашей компании в цифровом мире
+          {{ $t('blog-3.description') }}
         </h2>
         <p class="blog__description">
-          Сегодня первое впечатление о бизнесе формируется не через личные
-          встречи или рекомендации, а через ваш сайт. Если он устарел, медленно
-          загружается или неудобен для мобильных пользователей — шансы потерять
-          потенциального клиента возрастают многократно.
+          {{ $t('blog-3.description-2') }}
         </p>
         <img src="/img/blog-3-0.png" alt="img" class="blog__img" />
         <h2 class="blog__subtitle">
-          Как некачественный сайт влияет на ваш бизнес
+          {{ $t('blog-3.subtitle') }}
         </h2>
-        <h3 class="blog__subtitle-2">1. Упущенные клиенты</h3>
+        <h3 class="blog__subtitle-2">{{ $t('blog-3.subtitle-1') }}</h3>
         <p class="blog__description">
-          Около 70% пользователей формируют мнение о компании по внешнему виду
-          её сайта. Если он неудобен, загружается дольше 3 секунд или не
-          вызывает доверия, посетитель просто уйдёт к конкурентам.
+          {{ $t('blog-3.subtitle-1-description') }}
         </p>
-        <h3 class="blog__subtitle-2">2. Низкая конверсия</h3>
+        <h3 class="blog__subtitle-2">{{ $t('blog-3.subtitle-2') }}</h3>
         <p class="blog__description">
-          Даже если у вас отличный продукт, сайт без понятной навигации и четких
-          призывов к действию не сможет превратить посетителей в клиентов.
+          {{ $t('blog-3.subtitle-2-description') }}
         </p>
-        <h3 class="blog__subtitle-2">3. Неудобная мобильная версия</h3>
+        <h3 class="blog__subtitle-2">{{ $t('blog-3.subtitle-3') }}</h3>
         <p class="blog__description">
-          Более половины пользователей заходят на сайты с мобильных устройств.
-          Если ваш сайт плохо отображается на смартфонах, он теряет большую
-          часть аудитории.
+          {{ $t('blog-3.subtitle-3-description') }}
         </p>
-        <h3 class="blog__subtitle-2">4. Слабые позиции в поисковых системах</h3>
+        <h3 class="blog__subtitle-2">{{ $t('blog-3.subtitle-4') }}</h3>
         <p class="blog__description">
-          Поисковые системы, такие как Google, отдают приоритет сайтам с высокой
-          скоростью загрузки, адаптивным дизайном и оптимизированной структурой.
-          Без этого ваш сайт будет находиться в конце списка выдачи.
+          {{ $t('blog-3.subtitle-4-description') }}
         </p>
-        <h3 class="blog__subtitle-2">5. Недоверие со стороны клиентов</h3>
+        <h3 class="blog__subtitle-2">{{ $t('blog-3.subtitle-5') }}</h3>
         <p class="blog__description">
-          Непрофессиональный сайт может создать впечатление, что и сама компания
-          работает ненадёжно. Дизайн, структура и информация на сайте должны
-          вызывать доверие.
+          {{ $t('blog-3.subtitle-5-description') }}
         </p>
 
         <h2 class="blog__subtitle">
-          Как мы помогаем сделать сайт инструментом для роста бизнеса
+          {{ $t('blog-3.subtitle-6') }}
         </h2>
         <p class="blog__description">
-          Наша команда создаёт современные, быстрые и удобные сайты, которые не
-          просто представляют бизнес, но и помогают ему развиваться.
+          {{ $t('blog-3.subtitle-6-description') }}
         </p>
         <img src="/img/blog-3-1.jpg" alt="img" class="blog__img" />
-        <h3 class="blog__subtitle-2">Что мы предлагаем?</h3>
+        <h3 class="blog__subtitle-2">{{ $t('blog-3.subtitle-7') }}</h3>
 
         <p class="blog__description">
-          1. Дизайн, который привлекает и удерживает внимание
+          {{ $t('blog-3.subtitle-captain-1') }}
         </p>
         <ul class="list-reset blog__list">
           <li class="blog__item">
             <p class="blog__item-text">
-              Разрабатываем интуитивно понятные интерфейсы, которые помогают
-              пользователям находить нужную информацию без лишних усилий.
+              {{ $t('blog-3.subtitle-captain-item-1') }}
             </p>
           </li>
           <li class="blog__item">
             <p class="blog__item-text">
-              Подбираем стильное и современное оформление, соответствующее
-              вашему бренду.
-            </p>
-          </li>
-        </ul>
-        <p class="blog__description">2. Высокая скорость загрузки</p>
-        <ul class="list-reset blog__list">
-          <li class="blog__item">
-            <p class="blog__item-text">
-              Оптимизируем код и изображения, уменьшая время загрузки страниц.
-            </p>
-          </li>
-          <li class="blog__item">
-            <p class="blog__item-text">
-              Используем передовые технологии кэширования и сжатия данных.
+              {{ $t('blog-3.subtitle-captain-item-2') }}
             </p>
           </li>
         </ul>
-        <p class="blog__description">3. SEO-оптимизация</p>
+        <p class="blog__description">{{ $t('blog-3.subtitle-captain-2') }}</p>
         <ul class="list-reset blog__list">
           <li class="blog__item">
             <p class="blog__item-text">
-              Настраиваем сайт так, чтобы он был заметен в поисковых системах.
+              {{ $t('blog-3.subtitle-captain-2-item-1') }}
             </p>
           </li>
           <li class="blog__item">
             <p class="blog__item-text">
-              Улучшаем структуру страниц, работаем с ключевыми словами и
-              мета-тегами.
-            </p>
-          </li>
-        </ul>
-        <p class="blog__description">4. Адаптивность под все устройства</p>
-        <ul class="list-reset blog__list">
-          <li class="blog__item">
-            <p class="blog__item-text">
-              Гарантируем удобное использование сайта как на компьютерах, так и
-              на мобильных устройствах.
+              {{ $t('blog-3.subtitle-captain-2-item-2') }}
             </p>
           </li>
         </ul>
-        <p class="blog__description">5. Удобная система управления контентом</p>
+        <p class="blog__description">{{ $t('blog-3.subtitle-captain-3') }}</p>
         <ul class="list-reset blog__list">
           <li class="blog__item">
             <p class="blog__item-text">
-              Вы сможете легко редактировать контент и обновлять сайт без
-              специальных навыков.
+              {{ $t('blog-3.subtitle-captain-3-item-1') }}
+            </p>
+          </li>
+          <li class="blog__item">
+            <p class="blog__item-text">
+              {{ $t('blog-3.subtitle-captain-3-item-2') }}
+            </p>
+          </li>
+        </ul>
+        <p class="blog__description">{{ $t('blog-3.subtitle-captain-4') }}</p>
+        <ul class="list-reset blog__list">
+          <li class="blog__item">
+            <p class="blog__item-text">
+              {{ $t('blog-3.subtitle-captain-4-item-1') }}
+            </p>
+          </li>
+        </ul>
+        <p class="blog__description">{{ $t('blog-3.subtitle-captain-5') }}</p>
+        <ul class="list-reset blog__list">
+          <li class="blog__item">
+            <p class="blog__item-text">
+              {{ $t('blog-3.subtitle-captain-5-item-1') }}
             </p>
           </li>
         </ul>

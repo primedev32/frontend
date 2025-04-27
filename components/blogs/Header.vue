@@ -2,13 +2,13 @@
   <section class="header">
     <div class="container">
       <div class="header__wrapper">
-        <NuxtLink class="header__logo-link" to="/"
-          ><span class="header__logo">Primedev</span></NuxtLink
+        <NuxtLinkLocale class="header__logo-link" to="/"
+          ><span class="header__logo">Primedev</span></NuxtLinkLocale
         >
 
-        <NuxtLink to="/blogs" class="header__btn">
+        <NuxtLinkLocale to="/blogs" class="header__btn">
           <span class="header__btn-text">Вернуться</span>
-        </NuxtLink>
+        </NuxtLinkLocale>
       </div>
     </div>
   </section>

@@ -6,9 +6,9 @@
         <nav class="footer__nav">
           <ul class="list-reset footer__list">
             <li v-for="(item, index) in navList" :key="index">
-              <NuxtLink :to="item.link" class="footer__link">{{
-                item.title
-              }}</NuxtLink>
+              <NuxtLinkLocale :to="item.link" class="footer__link">{{
+                $t(`header.${item.title}`)
+              }}</NuxtLinkLocale>
             </li>
           </ul>
         </nav>
@@ -19,7 +19,7 @@
             href="/doc/policy.pdf"
             class="footer__wrapper-policy-link"
             target="_blank"
-            >Политика конфиденциальности</a
+            >{{ $t('footer.policy') }}</a
           >
           <span class="footer__wrapper-policy-text">© Primedev 2020–2025</span>
         </div>

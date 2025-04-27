@@ -7,13 +7,26 @@ export default defineNuxtConfig({
     url: 'https://primedev.pro/', 
     name: 'Primedev.pro' 
     }, 
-  modules: [
-    '@vueuse/nuxt',
-    'nuxt-swiper',
-    '@vee-validate/nuxt',
-    'vue-yandex-maps/nuxt',
-    '@nuxtjs/sitemap',
-  ],
+    modules: [
+      '@vueuse/nuxt',
+      'nuxt-swiper',
+      '@vee-validate/nuxt',
+      'vue-yandex-maps/nuxt',
+      '@nuxtjs/sitemap',
+      [
+        '@nuxtjs/i18n',
+        {
+          vueI18n: './vueI18n/i18n.config.ts',
+          locales: [
+            { code: 'ru', name: 'RU', files: ['ru.json'] },
+            { code: 'en', name: 'EN', files: ['en.json'] },
+          ],
+          lazy: true,
+          langDir: './vueI18n/lang',
+          defaultLocale: 'ru',
+        }
+      ],
+    ],
   build: {
     transpile: ['gsap'],
   },

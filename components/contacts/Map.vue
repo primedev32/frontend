@@ -3,10 +3,11 @@
     <div class="container">
       <div class="maps__wrapper">
         <div class="maps__content">
-          <h2 class="maps__content-title">Контактная информация</h2>
+          <h2 class="maps__content-title">
+            {{ $t('contact-page.map-title') }}
+          </h2>
           <p class="maps__discription">
-            Нужна консультация или помощь? Ознакомьтесь с нашими контактными
-            данными и свяжитесь с нами удобным для вас способом.
+            {{ $t('contact-page.map-description') }}
           </p>
           <ul class="list-reset maps__list">
             <li class="maps__item">

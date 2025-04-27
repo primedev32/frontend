@@ -1,49 +1,49 @@
 export const service = ref([
   {
-    services: 'Лендинг',
+    services: 'activ-button-1',
     active: false,
   },
   {
-    services: 'корпоративный сайт',
+    services: 'activ-button-2',
     active: false,
   },
   {
-    services: 'интернет-магазин',
+    services: 'activ-button-3',
     active: false,
   },
   {
-    services: 'Веб-дизайн',
+    services: 'activ-button-4',
     active: false,
   },
   {
-    services: 'программные решения',
+    services: 'activ-button-5',
     active: false,
   },
   {
-    services: 'seo',
+    services: 'activ-button-6',
     active: false,
   },
 ])
 
 export const budget = ref([
   {
-    services: 'менее 40 тыс.',
+    services: 'activ-button-7',
     active: false,
   },
   {
-    services: '70 тыс.',
+    services: 'activ-button-8',
     active: false,
   },
   {
-    services: '100-200 тыс.',
+    services: 'activ-button-9',
     active: false,
   },
   {
-    services: '200-500 тыс.',
+    services: 'activ-button-10',
     active: false,
   },
   {
-    services: 'другой',
+    services: 'activ-button-11',
     active: false,
   },
 ])

@@ -4,140 +4,120 @@
     <div class="blog__container">
       <div class="blog__wrapper">
         <h1 class="blog__title">
-          Какой сайт лучше выбрать для вашего бизнеса?
+          {{ $t('blog-2.title') }}
         </h1>
         <p class="blog__description">
-          Определение оптимального формата сайта зависит от целей бизнеса. Важно
-          понимать, какую задачу он должен решать: привлекать клиентов,
-          представлять компанию или продавать товары. Варианты могут включать
-          лендинг, корпоративный сайт, интернет-магазин или каталог. Разберёмся,
-          какой формат подойдёт именно вам.
+          {{ $t('blog-2.description') }}
         </p>
         <img src="/img/blog-2-0.jpg" alt="img" class="blog__img" />
-        <h2 class="blog__subtitle">1. Лендинг (Landing Page)</h2>
+        <h2 class="blog__subtitle">{{ $t('blog-2.subtitle-1') }}</h2>
         <p class="blog__description">
-          Лендинг — это одностраничный сайт, сфокусированный на конкретном
-          предложении. Его задача — мотивировать пользователя совершить целевое
-          действие, будь то покупка, подписка или заявка.
+          {{ $t('blog-2.subtitle-1-description') }}
         </p>
         <ul class="list-reset blog__list">
           <li class="blog__item">
             <p class="blog__item-text">
-              Ориентация на одно предложение: подходит для рекламы конкретного
-              продукта или услуги.
+              {{ $t('blog-2.subtitle-1-item-1') }}
             </p>
           </li>
           <li class="blog__item">
             <p class="blog__item-text">
-              Высокая конверсия: за счёт фокусировки на одной цели повышается
-              эффективность продаж.
+              {{ $t('blog-2.subtitle-1-item-2') }}
             </p>
           </li>
           <li class="blog__item">
             <p class="blog__item-text">
-              Простота восприятия: вся информация доступна на одной странице.
+              {{ $t('blog-2.subtitle-1-item-3') }}
             </p>
           </li>
           <li class="blog__item">
             <p class="blog__item-text">
-              Экономичность: разработка лендинга обходится дешевле, чем
-              полноценного сайта.
+              {{ $t('blog-2.subtitle-1-item-4') }}
             </p>
           </li>
         </ul>
         <p class="blog__description">
-          Идеально подойдёт для продвижения акций, запуска нового продукта или
-          сбора заявок.
+          {{ $t('blog-2.subtitle-1-description-2') }}
         </p>
 
-        <h2 class="blog__subtitle">2. Корпоративный сайт</h2>
+        <h2 class="blog__subtitle">{{ $t('blog-2.subtitle-2') }}</h2>
         <p class="blog__description">
-          Этот формат представляет собой многостраничный ресурс, содержащий
-          подробную информацию о компании, её услугах и деятельности.
+          {{ $t('blog-2.subtitle-2-description') }}
         </p>
         <ul class="list-reset blog__list">
           <li class="blog__item">
             <p class="blog__item-text">
-              Детальное представление компании: помогает выстроить доверие у
-              клиентов.
+              {{ $t('blog-2.subtitle-2-item-1') }}
             </p>
           </li>
           <li class="blog__item">
             <p class="blog__item-text">
-              Укрепление имиджа: наличие блога, кейсов и отзывов усиливает
-              репутацию.
+              {{ $t('blog-2.subtitle-2-item-2') }}
             </p>
           </li>
           <li class="blog__item">
             <p class="blog__item-text">
-              SEO-продвижение: страницы можно оптимизировать для поисковых
-              систем.
+              {{ $t('blog-2.subtitle-2-item-3') }}
             </p>
           </li>
           <li class="blog__item">
             <p class="blog__item-text">
-              Гибкость: сайт можно масштабировать, добавляя новые разделы.
+              {{ $t('blog-2.subtitle-2-item-4') }}
             </p>
           </li>
         </ul>
         <p class="blog__description">
-          Подойдёт компаниям, стремящимся укрепить позиции на рынке и
-          продемонстрировать свой опыт.
+          {{ $t('blog-2.subtitle-2-description-2') }}
         </p>
 
-        <h2 class="blog__subtitle">3. Интернет-магазин</h2>
+        <h2 class="blog__subtitle">{{ $t('blog-2.subtitle-3') }}</h2>
         <p class="blog__description">
-          Этот формат разработан для продажи товаров и включает каталог,
-          корзину, систему оплаты и доставки.
+          {{ $t('blog-2.subtitle-3-description') }}
         </p>
         <ul class="list-reset blog__list">
           <li class="blog__item">
             <p class="blog__item-text">
-              Автоматизация продаж: позволяет пользователям совершать покупки
-              без участия менеджера.
+              {{ $t('blog-2.subtitle-3-item-1') }}
             </p>
           </li>
           <li class="blog__item">
             <p class="blog__item-text">
-              Удобство для клиентов: фильтры, категории и рекомендации упрощают
-              процесс выбора.
+              {{ $t('blog-2.subtitle-3-item-2') }}
             </p>
           </li>
           <li class="blog__item">
             <p class="blog__item-text">
-              Маркетинговые инструменты: скидки, акции и программы лояльности
-              помогают привлекать клиентов.
+              {{ $t('blog-2.subtitle-3-item-3') }}
             </p>
           </li>
           <li class="blog__item">
             <p class="blog__item-text">
-              Аналитика: возможность отслеживания поведения пользователей и
-              корректировки стратегии.
+              {{ $t('blog-2.subtitle-3-item-4') }}
             </p>
           </li>
         </ul>
         <p class="blog__description">
-          Подходит для бизнеса, ориентированного на активные продажи товаров и
-          услуг в интернете.
+          {{ $t('blog-2.subtitle-3-description-2') }}
         </p>
 
-        <h2 class="blog__subtitle">Как сделать правильный выбор?</h2>
-        <p class="blog__description">Выбор зависит от ваших задач:</p>
+        <h2 class="blog__subtitle">{{ $t('blog-2.subtitle-4') }}</h2>
+        <p class="blog__description">
+          {{ $t('blog-2.subtitle-4-description') }}
+        </p>
         <ul class="list-reset blog__list">
           <li class="blog__item">
             <p class="blog__item-text">
-              Лендинг — для быстрого запуска рекламы и генерации заявок.
+              {{ $t('blog-2.subtitle-4-item-1') }}
             </p>
           </li>
           <li class="blog__item">
             <p class="blog__item-text">
-              Корпоративный сайт — для создания профессионального имиджа
-              компании.
+              {{ $t('blog-2.subtitle-4-item-2') }}
             </p>
           </li>
           <li class="blog__item">
             <p class="blog__item-text">
-              Интернет-магазин — для эффективной онлайн-торговли.
+              {{ $t('blog-2.subtitle-4-item-3') }}
             </p>
           </li>
         </ul>

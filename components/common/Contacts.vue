@@ -2,15 +2,18 @@
   <section class="contacts" id="contacts">
     <div class="container contacts__wrapper" style="position: relative">
       <img class="contacts__img" src="/img/home-contacts.webp" alt="img" />
-      <h2 class="contacts__title" ref="title1">{{ title }}</h2>
+      <h2 class="contacts__title" ref="title1">
+        {{ title }}
+      </h2>
       <h3 class="contacts__subtitle" ref="subtitle">
-        Заполняй мини-бриф, и мы мчимся к тебе с ответом в считанные минуты
+        {{ $t('contacts.subtitle') }}
       </h3>
 
       <div class="contacts__wrapper-form">
         <div class="contacts__block-left">
           <span for="text" class="contacts__label"
-            ><span class="contacts__label-span">01</span>Услуги</span
+            ><span class="contacts__label-span">01</span>
+            {{ $t('contacts.span-1') }}</span
           >
           <div class="contacts__btn-select-wrapper">
             <button
@@ -23,12 +26,13 @@
               <span
                 class="contacts__btn-select-text"
                 :class="{ 'contacts__btn-select-text-active': item.active }"
-                >{{ item.services }}</span
+                >{{ $t(`contacts.${item.services}`) }}</span
               >
             </button>
           </div>
           <span for="text" class="contacts__label"
-            ><span class="contacts__label-span">02</span>бюджет</span
+            ><span class="contacts__label-span">02</span>
+            {{ $t('contacts.span-2') }}</span
           >
           <div class="contacts__btn-select-wrapper">
             <button
@@ -41,7 +45,7 @@
               <span
                 class="contacts__btn-select-text"
                 :class="{ 'contacts__btn-select-text-active': item.active }"
-                >{{ item.services }}</span
+                >{{ $t(`contacts.${item.services}`) }}</span
               >
             </button>
           </div>
@@ -54,18 +58,19 @@
           @submit="sendForm"
         >
           <span for="text" class="contacts__label"
-            ><span class="contacts__label-span">03</span>что нужно
-            сделать?</span
+            ><span class="contacts__label-span">03</span>
+            {{ $t('contacts.span-3') }}</span
           >
           <textarea
             v-model="textarea"
             name="text"
             id="text"
-            placeholder="Опишите задачу"
+            :placeholder="$t('contacts.input-1')"
             class="contacts__textarea"
           />
           <span for="text" class="contacts__label"
-            ><span class="contacts__label-span">04</span>контакты</span
+            ><span class="contacts__label-span">04</span>
+            {{ $t('contacts.span-4') }}</span
           >
           <div class="contacts__input-wrapper">
             <div class="contacts__input-wrapper-2">
@@ -76,7 +81,9 @@
                     type="text"
                     id="name"
                     :placeholder="
-                      meta.touched && errorMessage ? errorMessage : 'Ваше имя'
+                      meta.touched && errorMessage
+                        ? $t('contacts.validation-2')
+                        : $t('contacts.input-2')
                     "
                     class="contacts__input"
                     :class="{
@@ -93,7 +100,7 @@
                     id="phone"
                     :placeholder="
                       meta.touched && errorMessage
-                        ? errorMessage
+                        ? $t('contacts.validation-3')
                         : '+7 (___) ___-__-__'
                     "
                     class="contacts__input"
@@ -112,7 +119,9 @@
                     type="email"
                     id="email"
                     :placeholder="
-                      meta.touched && errorMessage ? errorMessage : 'E-mail'
+                      meta.touched && errorMessage
+                        ? $t('contacts.validation-1')
+                        : 'E-mail'
                     "
                     class="contacts__input"
                     :class="{
@@ -124,20 +133,22 @@
               <input
                 v-model="link"
                 type="text"
-                placeholder="Ссылка на ТЗ"
+                :placeholder="$t('contacts.input-3')"
                 class="contacts__input"
               />
             </div>
           </div>
           <p class="contacts__text">
-            Нажимая на кнопку вы даёте согласие на обработку персональных данных
-            в соответствии с
-            <a class="contacts__policy" href="/doc/policy.pdf" target="_blank"
-              >Политикой конфиденциальности</a
+            {{ $t('contacts.policy') }}
+            <a
+              class="contacts__policy"
+              href="/doc/policy.pdf"
+              target="_blank"
+              >{{ $t('contacts.policy-link') }}</a
             >
           </p>
           <button form="form" type="submit" class="btn-reset contacts__btn">
-            <span class="contacts__btn-text">Отправить</span>
+            <span class="contacts__btn-text">{{ $t('contacts.button') }}</span>
           </button>
         </Form>
       </div>

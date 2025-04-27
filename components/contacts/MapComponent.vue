@@ -55,7 +55,9 @@ const handleClickOnBtnToMap = () => {
           background: '#0E7477',
         }"
       >
-        <button class="btn-reset btn-map">Посмотреть на карте</button>
+        <button class="btn-reset btn-map">
+          {{ $t('contact-page.maps-title') }}
+        </button>
       </YandexMapControlButton>
     </yandex-map-controls>
   </yandex-map>

@@ -4,142 +4,119 @@
     <div class="blog__container">
       <div class="blog__wrapper">
         <h1 class="blog__title">
-          Как привлечь новых клиентов на сайт в 2025 году
+          {{ $t('blog-1.title') }}
         </h1>
         <p class="blog__description">
-          Привлечение клиентов — это один из ключевых факторов успеха для
-          бизнеса. Этот процесс напрямую влияет на доход компании и ее
-          дальнейшее развитие. В условиях высокой конкуренции важно построить
-          грамотную стратегию, которая включает не только качественное
-          продвижение, но и улучшение пользовательского опыта на сайте. В этой
-          статье мы обсудим, какие методы привлечения клиентов актуальны в 2025
-          году, и как эффективно использовать инструменты для роста бизнеса.
+          {{ $t('blog-1.description') }}
         </p>
         <img src="/img/blog-1-0.png" alt="img" class="blog__img" />
         <h2 class="blog__subtitle">
-          1. Исследуйте и поймите вашу целевую аудиторию
+          {{ $t('blog-1.subtitle-1') }}
         </h2>
         <p class="blog__description">
-          Чтобы привлекать клиентов, нужно точно знать, кто они и как с ними
-          общаться. Понимание вашей аудитории поможет настроить маркетинг и
-          рекламные кампании. Вот несколько критериев для анализа:
+          {{ $t('blog-1.subtitle-1-description') }}
         </p>
         <ul class="list-reset blog__list">
           <li class="blog__item">
             <p class="blog__item-text">
-              Демографические данные: возраст, пол и социальный статус.
+              {{ $t('blog-1.subtitle-1-item-1') }}
             </p>
           </li>
           <li class="blog__item">
             <p class="blog__item-text">
-              Интересы и хобби, включая профессиональные увлечения.
+              {{ $t('blog-1.subtitle-1-item-2') }}
             </p>
           </li>
           <li class="blog__item">
             <p class="blog__item-text">
-              Проблемы и потребности, которые ваш продукт или услуга могут
-              решить.
+              {{ $t('blog-1.subtitle-1-item-3') }}
             </p>
           </li>
           <li class="blog__item">
             <p class="blog__item-text">
-              Где ваша аудитория проводит время в интернете.
+              {{ $t('blog-1.subtitle-1-item-4') }}
             </p>
           </li>
         </ul>
         <p class="blog__description">
-          Для сбора данных используйте такие инструменты, как Google Analytics
-          или Яндекс.Метрика. Это поможет создать точный профиль вашего клиента.
+          {{ $t('blog-1.subtitle-1-description-2') }}
         </p>
         <h2 class="blog__subtitle">
-          2. Разработайте уникальное предложение для клиентов (УТП)
+          {{ $t('blog-1.subtitle-2') }}
         </h2>
         <p class="blog__description">
-          УТП позволяет выделиться среди конкурентов и привлечь внимание
-          аудитории. Чтобы оно было эффективным, оно должно быть:
+          {{ $t('blog-1.subtitle-2-description') }}
         </p>
         <ul class="list-reset blog__list">
           <li class="blog__item">
-            <p class="blog__item-text">Ярким и запоминающимся;</p>
+            <p class="blog__item-text">{{ $t('blog-1.subtitle-2-item-1') }}</p>
           </li>
           <li class="blog__item">
-            <p class="blog__item-text">Легким для восприятия;</p>
+            <p class="blog__item-text">{{ $t('blog-1.subtitle-2-item-2') }}</p>
           </li>
           <li class="blog__item">
             <p class="blog__item-text">
-              Соответствующим потребностям вашей аудитории.
+              {{ $t('blog-1.subtitle-2-item-3') }}
             </p>
           </li>
         </ul>
         <p class="blog__description">
-          УТП можно использовать во всех рекламных материалах, от сайта до
-          рекламы. Например, фразы типа «Доставка за 1 день» или «Возврат без
-          вопросов» помогут укрепить доверие клиентов.
+          {{ $t('blog-1.subtitle-2-description-2') }}
         </p>
         <h2 class="blog__subtitle">
-          3. Создайте удобный и привлекательный веб-сайт
+          {{ $t('blog-1.subtitle-3') }}
         </h2>
         <p class="blog__description">
-          Ваш сайт — это первое, с чем сталкиваются клиенты, и он должен быть
-          привлекательным и функциональным. Вот несколько важных факторов:
+          {{ $t('blog-1.subtitle-3-description') }}
         </p>
         <ul class="list-reset blog__list">
           <li class="blog__item">
             <p class="blog__item-text">
-              Легкая и интуитивная навигация — посетители должны быстро находить
-              нужную информацию;
+              {{ $t('blog-1.subtitle-3-item-1') }}
             </p>
           </li>
           <li class="blog__item">
             <p class="blog__item-text">
-              Быстрая загрузка страниц — медленный сайт отпугивает посетителей;
+              {{ $t('blog-1.subtitle-3-item-2') }}
             </p>
           </li>
           <li class="blog__item">
             <p class="blog__item-text">
-              Адаптивность — сайт должен работать на всех устройствах, особенно
-              на мобильных.
+              {{ $t('blog-1.subtitle-3-item-3') }}
             </p>
           </li>
           <li class="blog__item">
             <p class="blog__item-text">
-              Полезный контент — разместите полезные статьи, отзывы и часто
-              задаваемые вопросы.
+              {{ $t('blog-1.subtitle-3-item-4') }}
             </p>
           </li>
         </ul>
         <p class="blog__description">
-          На сайте стоит добавить формы для сбора контактов, а также раздел с
-          контактными данными вашего бизнеса.
+          {{ $t('blog-1.subtitle-3-description-2') }}
         </p>
         <div class="blog__img-wrapper">
           <img src="/img/blog-1-1.png" alt="img" class="blog__img" />
         </div>
         <h2 class="blog__subtitle">
-          4. Используйте рекламу и социальные сети для привлечения аудитории
+          {{ $t('blog-1.subtitle-4') }}
         </h2>
         <p class="blog__description">
-          Платная реклама и социальные сети являются мощными инструментами для
-          привлечения клиентов.
+          {{ $t('blog-1.subtitle-4-description') }}
         </p>
         <ul class="list-reset blog__list">
           <li class="blog__item">
             <p class="blog__item-text">
-              Контекстная реклама (например, Яндекс.Директ) помогает привлекать
-              аудиторию, которая уже ищет ваш продукт.
+              {{ $t('blog-1.subtitle-4-item-1') }}
             </p>
           </li>
           <li class="blog__item">
             <p class="blog__item-text">
-              Социальные сети, такие как ВКонтакте и Telegram, идеально подходят
-              для общения с клиентами и продвижения товаров через акции и посты.
+              {{ $t('blog-1.subtitle-4-item-2') }}
             </p>
           </li>
         </ul>
         <p class="blog__description">
-          Важно настроить таргетинг, чтобы реклама показывалась тем, кто
-          действительно заинтересован в вашем продукте. Это поможет максимально
-          эффективно использовать ваш рекламный бюджет.
+          {{ $t('blog-1.subtitle-4-description-2') }}
         </p>
       </div>
     </div>

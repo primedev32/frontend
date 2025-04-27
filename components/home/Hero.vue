@@ -13,26 +13,23 @@
       </div>
       <div class="container">
         <div class="hero__content">
-          <span class="hero__subtitle">Профессиональная веб-студия</span>
-          <h1 class="hero__title">РАЗРАБОТКА САЙТОВ БЕЗ ОГРАНИЧЕНИЙ</h1>
+          <span class="hero__subtitle">
+            {{ $t(`hero-home.span`) }}
+          </span>
+          <h1 class="hero__title">{{ $t(`hero-home.span`) }}</h1>
           <p class="hero__description">
-            Большинство сайтов теряют клиентов из-за медленной загрузки и
-            неудобного интерфейса. Мы создаем современные, быстрые и адаптивные
-            сайты, которые не только привлекают внимание, но и превращают
-            посетителей в ваших клиентов.
+            {{ $t(`hero-home.description`) }}
           </p>
           <button
             @click="scrollToSection('contacts')"
             class="btn-reset hero__btn"
           >
-            <span class="hero__btn-text">Создать сайт</span>
+            <span class="hero__btn-text">{{ $t(`hero-home.button`) }}</span>
           </button>
         </div>
         <div class="hero__stats">
-          <span class="hero__stats-text">Более 100</span>
-          <span class="hero__stats-text-2"
-            >сайтов успешно запущены и приносят прибыль своим владельцам</span
-          >
+          <span class="hero__stats-text">{{ $t(`hero-home.stat1`) }}</span>
+          <span class="hero__stats-text-2">{{ $t(`hero-home.stat2`) }}</span>
         </div>
       </div>
     </div>

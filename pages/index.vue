@@ -7,7 +7,7 @@
     <HomeTypesSite />
     <HomeMarketing />
     <HomeReviews />
-    <CommonContacts :title="'Начнём работу?'" />
+    <CommonContacts :title="$t('contacts.title1')" />
     <Footer />
   </div>
 </template>
