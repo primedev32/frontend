@@ -7,14 +7,14 @@
             :to="item.link"
             class="burger__link"
             @click="emit('closeBurger')"
-            >{{ item.title }}
+            >{{ $t(`header.${item.title}`) }}
           </NuxtLinkLocale>
         </li>
       </ul>
       <button class="btn-reset burger__btn">
-        <span @click="scrollToSection('contacts')" class="burger__btn-text"
-          >Связаться с нами</span
-        >
+        <span @click="scrollToSection('contacts')" class="burger__btn-text">{{
+          $t('header.button')
+        }}</span>
       </button>
       <ul class="list-reset burger__list-social">
         <li v-for="(item, index) in socialList" :key="index">

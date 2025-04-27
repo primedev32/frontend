@@ -7,7 +7,7 @@
         >
 
         <NuxtLinkLocale to="/blogs" class="header__btn">
-          <span class="header__btn-text">Вернуться</span>
+          <span class="header__btn-text">{{ $t('blog.header') }}</span>
         </NuxtLinkLocale>
       </div>
     </div>
