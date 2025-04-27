@@ -12,7 +12,7 @@
         </li>
       </ul>
       <button class="btn-reset burger__btn">
-        <span @click="scrollToSection('contacts')" class="burger__btn-text">{{
+        <span @click="scrollToContacts('contacts')" class="burger__btn-text">{{
           $t('header.button')
         }}</span>
       </button>
@@ -30,14 +30,52 @@
 <script lang="ts" setup>
 defineProps<{ isOpen: boolean }>()
 const emit = defineEmits(['closeBurger'])
-const scrollToSection = (id: string) => {
-  const element = document.getElementById(id)
-  if (element) {
-    window.scrollTo({
-      top: element.offsetTop,
-      behavior: 'smooth',
+// const scrollToSection = (id: string) => {
+//   const element = document.getElementById(id)
+//   if (element) {
+//     window.scrollTo({
+//       top: element.offsetTop,
+//       behavior: 'smooth',
+//     })
+//     emit('closeBurger')
+//   }
+// }
+const { $gsap } = useNuxtApp()
+const { locale } = useI18n()
+const scrollToContacts = async () => {
+  const section = document.getElementById('contacts')
+
+  if (section) {
+    $gsap.to(window, {
+      duration: 1,
+      scrollTo: section,
+      ease: 'power2.out',
     })
-    emit('closeBurger')
+  } else {
+    const loc = locale.value
+    if (loc === 'en') {
+      await navigateTo(`/${loc}/contacts`)
+    } else {
+      locale.value = ''
+      await navigateTo(`/contacts`)
+    }
+
+    // Переходим на страницу контактов с сохранением локал
+    await nextTick()
+    const mainSection = document.getElementById('contacts')
+    if (mainSection) {
+      $gsap.to(window, {
+        duration: 1,
+        scrollTo: mainSection,
+        ease: 'power2.out',
+      })
+    } else {
+      $gsap.to(window, {
+        duration: 1,
+        scrollTo: 0,
+        ease: 'power2.out',
+      })
+    }
   }
 }
 </script>
