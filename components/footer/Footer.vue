@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__wrapper">
-        <h3 class="footer__title">Primedev</h3>
+        <h3 class="footer__title">PrimeDev</h3>
         <nav class="footer__nav">
           <ul class="list-reset footer__list">
             <li v-for="(item, index) in navList" :key="index">
@@ -21,7 +21,7 @@
             target="_blank"
             >{{ $t('footer.policy') }}</a
           >
-          <span class="footer__wrapper-policy-text">© Primedev 2020–2025</span>
+          <span class="footer__wrapper-policy-text">© PrimeDev 2020–2025</span>
         </div>
         <ul class="list-reset footer__list-social">
           <li v-for="(item, index) in socialList" :key="index">
@@ -39,7 +39,7 @@
           >
         </div>
       </div>
-      <h2 class="footer__title-2">Primedev</h2>
+      <h2 class="footer__title-2">PrimeDev</h2>
     </div>
   </footer>
 </template>

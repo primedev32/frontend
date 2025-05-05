@@ -150,6 +150,11 @@
           <button form="form" type="submit" class="btn-reset contacts__btn">
             <span class="contacts__btn-text">{{ $t('contacts.button') }}</span>
           </button>
+          <Transition name="contacts__fade">
+            <p v-if="messageTrue" class="contacts__message">
+              Ваше сообщение успешно отправлено!
+            </p>
+          </Transition>
         </Form>
       </div>
     </div>
@@ -166,6 +171,7 @@ const subtitle = ref<HTMLElement | null>(null)
 
 const textarea = ref('')
 const link = ref('')
+const messageTrue = ref(false)
 
 const activeService = (index: number) => {
   service.value.forEach((item, i) => {
@@ -184,6 +190,12 @@ const { sendToTelegram } = useSendToTelegram()
 const validationSchema = useValidation(['name', 'phone', 'email'])
 
 const sendForm = async (values: any, { resetForm }: any) => {
+  setTimeout(() => {
+    messageTrue.value = true
+    setTimeout(() => {
+      messageTrue.value = false
+    }, 4000)
+  })
   try {
     const formData = {
       name: values.name,
@@ -276,6 +288,16 @@ onMounted(() => {
   @media screen and (max-width: 655px) {
     padding: 80px 0;
   }
+  &__fade-enter-active,
+  &__fade-leave-active {
+    transition: opacity 0.5s ease;
+  }
+
+  &__fade-enter-from,
+  &__fade-leave-to {
+    opacity: 0;
+  }
+
   &__wrapper {
     z-index: 5;
   }
@@ -290,6 +312,17 @@ onMounted(() => {
     z-index: -1;
     @media screen and (max-width: 913px) {
       display: none;
+    }
+  }
+  &__message {
+    margin: 10px 0;
+    color: green;
+    font-family: 'Raleway';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    @media screen and (max-width: 655px) {
+      font-size: 14px;
     }
   }
   &__title {

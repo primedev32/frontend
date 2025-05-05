@@ -3,7 +3,7 @@
     <div class="container">
       <div class="header__wrapper">
         <NuxtLinkLocale class="header__logo-link" to="/"
-          ><span class="header__logo">Primedev</span></NuxtLinkLocale
+          ><span class="header__logo">PrimeDev</span></NuxtLinkLocale
         >
 
         <NuxtLinkLocale to="/blogs" class="header__btn">

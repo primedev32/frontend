@@ -12,7 +12,7 @@
         </li>
       </ul>
       <button class="btn-reset burger__btn">
-        <span @click="scrollToContacts('contacts')" class="burger__btn-text">{{
+        <span @click="scrollToContacts()" class="burger__btn-text">{{
           $t('header.button')
         }}</span>
       </button>
