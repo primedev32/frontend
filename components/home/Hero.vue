@@ -92,6 +92,7 @@ onMounted(() => {
   //   margin-bottom: 100px;
   // }
   @media screen and (max-width: 1086px) {
+    height: 100%;
     min-height: 791px;
   }
   @media screen and (max-width: 913px) {
