@@ -13,9 +13,9 @@
       </div>
       <div class="container">
         <div class="hero__content">
-          <span class="hero__subtitle">
+          <!-- <span class="hero__subtitle">
             {{ $t(`hero-home.span`) }}
-          </span>
+          </span> -->
           <h1 class="hero__title">{{ $t(`hero-home.span`) }}</h1>
           <p class="hero__description">
             {{ $t(`hero-home.description`) }}
@@ -85,12 +85,12 @@ onMounted(() => {
 .hero {
   margin-bottom: 130px;
   width: 100%;
-  min-height: 950px;
+  height: 100vh;
   position: relative;
   overflow: hidden;
-  @media screen and (max-width: 1500px) {
-    margin-bottom: 100px;
-  }
+  // @media screen and (max-width: 1500px) {
+  //   margin-bottom: 100px;
+  // }
   @media screen and (max-width: 1086px) {
     min-height: 791px;
   }
@@ -230,7 +230,7 @@ onMounted(() => {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    max-width: 1200px;
+    // max-width: 1200px;
     position: absolute;
     bottom: 10%;
     right: 5%;
