@@ -36,7 +36,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     apiKey: process.env.NUXT_PRIVATE_KEY_FOR_STRAPI,
     public: {
-      baseURL: process.env.NUXT_PUBLIC_BASE_URL,
+      baseURL: process.env.NUXT_PUBLIC_BASE_URL || 'http://109.73.201.173:1337',
     },
   }
 })
