@@ -8,22 +8,17 @@
           :progress="true"
           :breakpoints="breakpoints"
           @instance="setSwiperInstance"
-          :slide-card="reviewsCard"
+          :slide-card="homeReviews?.data"
           custom-button-next="reviews__custom-button-next"
           custom-button-prev="reviews__custom-button-prev"
         >
           <template #slide="{ item }">
             <div class="reviews__reviews-wrapper">
-              <img
-                :src="item.avatar"
-                alt="avatar"
-                class="reviews__swiper-avatar"
-              />
               <p class="reviews__swiper-description">
-                {{ $t(`reviews.${item.description}`) }}
+                {{ item?.attributes?.description || item.description }}
               </p>
               <h3 class="reviews__swiper-title">
-                {{ $t(`reviews.${item.name}`) }}
+                {{ item?.attributes?.autor || item.autor }}
               </h3>
             </div>
           </template></CommonSwiper
@@ -47,12 +42,68 @@
           class="btn-reset reviews__custom-button-next"
         ></button>
       </div>
+      <div class="reviews__link-wrapper">
+        <NuxtLinkLocale to="/add-rewiew" class="reviews__link">{{
+          $t('reviews.link')
+        }}</NuxtLinkLocale>
+        <img
+          src="/img/home-reviews.png"
+          alt="reviews-icon"
+          class="reviews__icon"
+        />
+      </div>
     </div>
   </section>
 </template>
 
 <script lang="ts" setup>
 const { $gsap } = useNuxtApp()
+const { locale } = useI18n()
+
+interface Review {
+  id: number
+  attributes: {
+    description: string
+    autor: string
+    createdAt: string
+    updatedAt: string
+    publishedAt: string | null
+  }
+}
+
+interface ReviewsResponse {
+  data: Review[]
+  meta: any
+}
+
+const homeReviews = ref<ReviewsResponse | null>(null)
+
+const loadReviews = async () => {
+  try {
+    const response = await useCustomFetch(apiReviews, {
+      query: {
+        populate: '*',
+        sort: ['createdAt:desc'],
+        locale: locale.value,
+      },
+    })
+    homeReviews.value = response as ReviewsResponse
+  } catch (error) {
+    console.error('Error loading reviews:', error)
+  }
+}
+
+// Следим за изменением языка
+watch(
+  locale,
+  () => {
+    loadReviews()
+  },
+  { immediate: true }
+)
+onMounted(() => {
+  loadReviews()
+})
 
 const title = ref<HTMLElement | null>(null)
 const swiperRef = ref<any>(null)
@@ -94,6 +145,16 @@ const handleClickNext = () => {
     swiperRef.value.slideNext()
   }
 }
+
+watch(
+  () => homeReviews.value?.data,
+  (newVal) => {
+    if (swiperRef.value && newVal && newVal.length) {
+      swiperRef.value.slideTo(0, 0) // Сброс к первому слайду без анимации
+      updateProgress(swiperRef.value)
+    }
+  }
+)
 
 onMounted(() => {
   $gsap.fromTo(
@@ -153,6 +214,7 @@ onMounted(() => {
   }
   &__swiper-description {
     margin-bottom: 20px;
+    width: 100%;
     color: #000;
     font-family: 'Onest';
     font-size: 20px;
@@ -199,6 +261,7 @@ onMounted(() => {
     padding: 240px 20px 20px 20px;
     border-radius: 15px;
     min-height: 456px;
+    width: 100%;
     height: 100%;
     background: url('/img/quote-small.webp') no-repeat 20px 20px / 40px auto,
       url('/img/quote.webp') no-repeat 20px 30px / 170px auto, #fff;
@@ -218,6 +281,7 @@ onMounted(() => {
     }
   }
   &__buttons {
+    margin-bottom: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -275,11 +339,50 @@ onMounted(() => {
     width: 0%;
     transition: width 0.3s;
   }
+  &__link {
+    display: inline-block;
+    color: #fff;
+    font-family: 'Onest';
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 120%;
+    text-decoration: none;
+    @media screen and (max-width: 655px) {
+      font-size: 16px;
+    }
+    &-wrapper {
+      display: flex;
+      width: fit-content;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          .reviews__icon {
+            transform: translateX(10px);
+            transition: transform 0.3s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+  &__icon {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease-in-out;
+    @media screen and (max-width: 655px) {
+      width: 30px;
+      height: 30px;
+    }
+  }
 }
 </style>
 <style>
 .swiper-slide {
   height: auto;
   display: flex;
+}
+.slider__wrapper {
+  width: 100%;
 }
 </style>

@@ -78,7 +78,17 @@
 		"card-description-6": "The website from Primedev was a real gift for our company. We did not expect such a fast and high-quality result. Everything works like clockwork, and the admin panel is clear and convenient. These guys really know what they are doing!",
 		"card-name-6": "Alexey Kuznetsov",
 		"card-description-7": "Working with Primedev exceeded all our expectations. We received not just a website, but a real tool for business. Everything is done qualitatively, quickly and with soul. And most importantly - it is fully adaptable to any device!",
-		"card-name-7": "Elena Smolskaya"
+		"card-name-7": "Elena Smolskaya",
+		"link": "Share your opinion!",
+		"add-review-title": "Leave a review",
+		"add-review-button": "Send a review",
+		"add-review-placeholder": "Your review",
+		"add-review-placeholder-autor": "Your name",
+		"add-review-placeholder-error": "Please write your review",
+		"add-review-placeholder-error-min": "The review must contain a minimum of 10 characters",
+		"add-review-placeholder-error-autor": "Please enter your name",
+		"add-review-success": "Thank you! Your review has been successfully sent",
+		"add-review-error": "An error occurred while sending the review. Please try again later"
 	},
 	"contacts": {
 	"title1": "Let's get started?",

@@ -33,4 +33,10 @@ export default defineNuxtConfig({
   yandexMaps: {
     apikey: '54a27b4b-995e-4730-ab68-4da252a2b940',
   },
+  runtimeConfig: {
+    apiKey: process.env.NUXT_PRIVATE_KEY_FOR_STRAPI,
+    public: {
+      baseURL: process.env.NUXT_PUBLIC_BASE_URL,
+    },
+  }
 })
