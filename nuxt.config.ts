@@ -30,6 +30,18 @@ export default defineNuxtConfig({
   build: {
     transpile: ['gsap'],
   },
+  vite: {
+    server: {
+      allowedHosts: [
+        'primedev.pro',
+        'www.primedev.pro',
+        'admin.primedev.pro',
+        'token.primedev.pro',
+        'localhost',
+        '127.0.0.1'
+      ]
+    }
+  },
   yandexMaps: {
     apikey: '54a27b4b-995e-4730-ab68-4da252a2b940',
   },
