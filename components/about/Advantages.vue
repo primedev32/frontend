@@ -92,10 +92,7 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .advantages {
-  padding: 150px 0;
-  @media screen and (max-width: 1500px) {
-    padding: 100px 0;
-  }
+  padding: 100px 0;
   @media screen and (max-width: 463px) {
     padding: 80px 0;
   }
@@ -104,7 +101,7 @@ onMounted(() => {
     flex-direction: column;
     gap: 160px;
     @media screen and (max-width: 913px) {
-      gap: 100px;
+      gap: 60px;
     }
   }
   &__description-wrapper {
@@ -133,21 +130,21 @@ onMounted(() => {
   &__description-title {
     color: #fff;
     font-family: 'Onest';
-    font-size: 64px;
+    font-size: 45px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     @media screen and (max-width: 1500px) {
-      font-size: 54px;
-    }
-    @media screen and (max-width: 1200px) {
       font-size: 40px;
     }
-    @media screen and (max-width: 1022px) {
+    @media screen and (max-width: 1200px) {
       font-size: 30px;
     }
+    @media screen and (max-width: 1022px) {
+      font-size: 20px;
+    }
     @media screen and (max-width: 463px) {
-      font-size: 26px;
+      font-size: 16px;
     }
   }
   &__description {
@@ -155,18 +152,18 @@ onMounted(() => {
     color: #fff;
     text-align: center;
     font-family: 'Onest';
-    font-size: 20px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     @media screen and (max-width: 1500px) {
-      font-size: 18px;
+      font-size: 14px;
     }
     @media screen and (max-width: 655px) {
       max-width: 100%;
     }
     @media screen and (max-width: 463px) {
-      font-size: 14px;
+      font-size: 12px;
     }
   }
   &__list {
@@ -184,33 +181,33 @@ onMounted(() => {
     display: flex;
     padding: 30px 30px 30px 30px;
     width: 100%;
-    height: 350px;
+    height: 259px;
     border-radius: 15px;
-    background-size: 60px 60px;
+    background-size: 45px 45px;
     @media screen and (max-width: 1200px) {
-      height: 300px;
+      height: 209px;
       background-size: 50px 50px;
     }
     @media screen and (max-width: 913px) {
       max-width: 500px;
-      height: 270px;
+      height: 179px;
     }
     @media screen and (max-width: 463px) {
-      height: 235px;
+      height: 145px;
       background-size: 40px 40px;
     }
     &:nth-child(2) {
-      height: 390px;
+      height: 299px;
       transform: translateY(-40px);
       @media screen and (max-width: 1200px) {
-        height: 340px;
+        height: 249px;
       }
       @media screen and (max-width: 913px) {
-        height: 270px;
+        height: 179px;
         transform: translateY(0px);
       }
       @media screen and (max-width: 463px) {
-        height: 235px;
+        height: 145px;
       }
     }
   }
@@ -218,18 +215,18 @@ onMounted(() => {
     margin-top: auto;
     color: #fff;
     font-family: 'Inter';
-    font-size: 24px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 120%; /* 28.8px */
     @media screen and (max-width: 1500px) {
-      font-size: 22px;
+      font-size: 16px;
     }
     @media screen and (max-width: 1200px) {
-      font-size: 20px;
+      font-size: 14px;
     }
     @media screen and (max-width: 463px) {
-      font-size: 18px;
+      font-size: 12px;
     }
   }
 }

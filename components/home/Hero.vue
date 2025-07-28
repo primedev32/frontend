@@ -7,11 +7,17 @@
           <source src="/video/home-hero.mp4" type="video/mp4" />
           Ваш браузер не поддерживает видео.
         </video>
+        <div class="hero__overlay-dark"></div>
         <picture class="hero__overlay">
           <img class="hero__image" src="/img/home-hero.webp" alt="Hero" />
         </picture>
       </div>
-      <div class="container">
+
+      <div class="hero__content-wrapper">
+        <div class="hero__stats">
+          <span class="hero__stats-text">{{ $t(`hero-home.stat1`) }}</span>
+          <span class="hero__stats-text-2">{{ $t(`hero-home.stat2`) }}</span>
+        </div>
         <div class="hero__content">
           <!-- <span class="hero__subtitle">
             {{ $t(`hero-home.span`) }}
@@ -26,10 +32,6 @@
           >
             <span class="hero__btn-text">{{ $t(`hero-home.button`) }}</span>
           </button>
-        </div>
-        <div class="hero__stats">
-          <span class="hero__stats-text">{{ $t(`hero-home.stat1`) }}</span>
-          <span class="hero__stats-text-2">{{ $t(`hero-home.stat2`) }}</span>
         </div>
       </div>
     </div>
@@ -139,12 +141,22 @@ onMounted(() => {
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 2;
+  }
+  &__overlay-dark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
   }
   &__subtitle {
     margin-bottom: 15px;
     color: #fff;
     font-family: 'Onest';
-    font-size: 20px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 120%; /* 24px */
@@ -158,19 +170,13 @@ onMounted(() => {
   &__title {
     color: #fff;
     font-family: 'Raleway';
-    font-size: 96px;
+    font-size: 56px;
     font-style: normal;
     font-weight: 700;
     line-height: 120%; /* 115.2px */
     text-align: right;
     @media screen and (max-width: 1500px) {
-      font-size: 69px;
-    }
-    @media screen and (max-width: 913px) {
-      font-size: 56px;
-    }
-    @media screen and (max-width: 817px) {
-      font-size: 46px;
+      font-size: 40px;
     }
     @media screen and (max-width: 655px) {
       font-size: 36px;
@@ -181,21 +187,22 @@ onMounted(() => {
     }
   }
   &__btn {
-    max-width: 300px;
-    padding: 10px 30px;
+    max-width: 150px;
+    padding: 7px 20px;
     border-radius: 5px;
     background: #ffcb9b;
     transition: background 0.3s ease-out;
     &-text {
       color: #000;
       font-family: 'Onest';
-      font-size: 20px;
+      font-size: 16px;
       font-style: normal;
       font-weight: 400;
       line-height: normal;
       @media screen and (max-width: 913px) {
-        font-size: 18px;
-        padding: 10px 21px;
+      }
+      @media screen and (max-width: 463px) {
+        font-size: 14px;
       }
     }
     &:hover {
@@ -203,11 +210,11 @@ onMounted(() => {
     }
   }
   &__description {
-    max-width: 1041px;
+    max-width: 600px;
     margin-bottom: 31px;
     color: #fff;
     font-family: 'Onest';
-    font-size: 18px;
+    font-size: 16px;
     text-align: right;
     font-style: normal;
     font-weight: 400;
@@ -218,7 +225,6 @@ onMounted(() => {
     }
     @media screen and (max-width: 913px) {
       font-size: 14px;
-      max-width: 617px;
     }
     @media screen and (max-width: 767px) {
       font-size: 12px;
@@ -227,50 +233,78 @@ onMounted(() => {
       max-width: 617px;
     }
   }
+  &__content-wrapper {
+    // position: absolute;
+    // bottom: 10%;
+    // right: 5%;
+    // transform: translate(0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 1470px;
+    width: 100%;
+    padding: 100px 50px;
+    z-index: 3;
+    @media screen and (max-width: 1024px) {
+      padding: 50px 40px;
+      justify-content: flex-end;
+    }
+
+    @media screen and (max-width: 480px) {
+      padding: 50px 15px;
+    }
+  }
   &__content {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     // max-width: 1200px;
-    position: absolute;
-    bottom: 10%;
-    right: 5%;
-    transform: translateY(0);
-    @media screen and (max-width: 1500px) {
-      bottom: 19%;
-    }
-    @media screen and (max-width: 655px) {
-      bottom: 11%;
-    }
+    // position: absolute;
+    // bottom: 10%;
+    // right: 5%;
+    // transform: translate(0, 0);
+    // @media screen and (max-width: 1500px) {
+    //   bottom: 19%;
+    // }
+    // @media screen and (max-width: 655px) {
+    //   bottom: 11%;
+    // }
   }
   &__stats {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    bottom: 10%;
-    left: 3%;
+    // position: absolute;
+    // bottom: 10%;
+    // left: 3%;
     padding: 20px;
     border-radius: 15px;
     border: 1px solid rgba(0, 0, 0, 0);
     max-width: 230px;
+    height: max-content;
     background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(7.5px);
     @media screen and (max-width: 1500px) {
       padding: 17px;
     }
-    @media screen and (max-width: 913px) {
+    @media screen and (max-width: 1024px) {
       display: none;
     }
   }
   &__stats-text {
     color: #fff;
     font-family: 'Raleway';
-    font-size: 32px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 700;
     line-height: 120%; /* 57.6px */
     @media screen and (max-width: 1500px) {
-      font-size: 28px;
+      font-size: 18px;
     }
   }
   &__stats-text-2 {

@@ -103,46 +103,49 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .projects {
-  padding-bottom: 87px;
+  padding-bottom: 80px;
   overflow: hidden;
   &__title {
+    max-width: 600px;
+    margin: 0 auto;
     margin-bottom: 50px;
     color: #fff;
     text-align: center;
     font-family: 'Raleway';
-    font-size: 65px;
+    font-size: 35px;
     font-style: normal;
     font-weight: 700;
     line-height: 120%; /* 115.2px */
     text-transform: uppercase;
     @media screen and (max-width: 1500px) {
-      font-size: 45px;
+      font-size: 30px;
     }
     @media screen and (max-width: 655px) {
-      font-size: 32px;
+      font-size: 25px;
     }
     @media screen and (max-width: 463px) {
-      font-size: 24px;
-      text-align: left;
+      font-size: 22px;
+      text-align: center;
     }
     &-span {
       font-weight: 400;
     }
   }
   &__img-content-title {
+    max-width: 500px;
     color: #fff;
     text-align: center;
     font-family: 'Raleway';
-    font-size: 36px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 400;
     line-height: 120%; /* 43.2px */
     white-space: unset;
     @media screen and (max-width: 1500px) {
-      font-size: 24px;
+      font-size: 20px;
     }
     @media screen and (max-width: 463px) {
-      font-size: 18px;
+      font-size: 16px;
     }
   }
   &__wrapper-img {
@@ -170,7 +173,7 @@ onMounted(() => {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    gap: 26px;
     @media screen and (max-width: 1500px) {
       gap: 15px;
     }
@@ -179,9 +182,9 @@ onMounted(() => {
     }
   }
   &__img-content-link {
-    min-width: 230px;
-    padding: 15px 20px;
-    height: 52px;
+    min-width: 200px;
+    padding: 11px 7px;
+    height: 45px;
     text-align: center;
     text-decoration: none;
     border-radius: 5px;
@@ -200,13 +203,10 @@ onMounted(() => {
     color: #000;
     text-align: center;
     font-family: 'Onest';
-    font-size: 18px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    @media screen and (max-width: 463px) {
-      font-size: 16px;
-    }
   }
   &__list {
     display: grid;
@@ -235,16 +235,16 @@ onMounted(() => {
   &__item-content-title {
     color: #fff;
     font-family: 'Raleway';
-    font-size: 36px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 400;
     line-height: 120%; /* 43.2px */
     @media screen and (max-width: 1500px) {
       text-align: center;
-      font-size: 24px;
+      font-size: 20px;
     }
     @media screen and (max-width: 463px) {
-      font-size: 18px;
+      font-size: 16px;
     }
   }
   &__item-img {
@@ -259,17 +259,16 @@ onMounted(() => {
     }
   }
   &__item-content-link {
-    min-width: 230px;
-    height: 52px;
+    min-width: 200px;
+    height: 45px;
     text-align: center;
-    padding: 15px 20px;
+    padding: 11px 7px;
     text-decoration: none;
     border-radius: 5px;
     border: 1px solid #000;
     background: #ffcb9b;
     transition: background 0.3s ease-out;
     @media screen and (max-width: 463px) {
-      padding: 8px 20px;
       height: 43px;
     }
     &:hover {
@@ -280,13 +279,10 @@ onMounted(() => {
     width: 100%;
     color: #000;
     font-family: 'Onest';
-    font-size: 18px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    @media screen and (max-width: 463px) {
-      font-size: 16px;
-    }
   }
 }
 </style>

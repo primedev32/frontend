@@ -52,52 +52,58 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .blogs {
-  padding: 130px 0;
-  @media screen and (max-width: 1500px) {
-    padding: 80px 0;
-  }
+  padding-top: 100px;
+  // @media screen and (max-width: 1500px) {
+  //   padding: 80px 0;
+  // }
   @media screen and (max-width: 655px) {
-    padding: 80px 0 30px 0;
+    padding-top: 50px;
   }
   &__items-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 980px) {
       grid-template-columns: repeat(2, 1fr);
     }
     @media screen and (max-width: 655px) {
       grid-template-columns: repeat(1, 1fr);
     }
+    // @media screen and (max-width: 1000px) {
+    //   grid-template-columns: repeat(2, 1fr);
+    // }
+    // @media screen and (max-width: 655px) {
+    //   grid-template-columns: repeat(1, 1fr);
+    // }
   }
   &__items-item {
-    background-image: url('/img/blogs-items.png');
+    background-image: url(/img/blogs-items.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     height: 100%;
-    min-height: 344px;
+    min-height: 224px;
     width: 100%;
-    padding-top: 280px;
+    padding-top: 151px;
     border-radius: 15px;
-    @media screen and (max-width: 1500px) {
-      padding-top: 180px;
-      min-height: 280px;
-    }
-    @media screen and (max-width: 655px) {
-      min-height: 206px;
-    }
+    // @media screen and (max-width: 1500px) {
+    //   padding-top: 180px;
+    //   min-height: 280px;
+    // }
+    // @media screen and (max-width: 655px) {
+    //   min-height: 206px;
+    // }
   }
   &__items-wrap {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
+    padding: 11px;
     gap: 15px;
     border-radius: 15px;
     background: rgba(0, 0, 0, 0.3);
     width: 100%;
-    min-height: 100px;
+    min-height: 73px;
     backdrop-filter: blur(2px);
     @media screen and (max-width: 1500px) {
       min-height: 100%;
@@ -106,29 +112,25 @@ onMounted(() => {
   &__items-description {
     color: #fff;
     font-family: 'Onest';
-    font-size: 20px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 120%; /* 28.8px */
     @media screen and (max-width: 1500px) {
-      font-size: 18px;
-    }
-    @media screen and (max-width: 722px) {
-      font-size: 16px;
-    }
-    @media screen and (max-width: 655px) {
       font-size: 14px;
     }
+    // @media screen and (max-width: 722px) {
+    //   font-size: 12px;
+    // }
+    // @media screen and (max-width: 655px) {
+    //   font-size: 14px;
+    // }
   }
   &__items-card {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     opacity: 0.5;
     transition: opacity 0.3s ease-in-out;
-    @media screen and (max-width: 1000px) {
-      width: 30px;
-      height: 30px;
-    }
   }
   &__items-link {
     text-decoration: none;

@@ -91,61 +91,32 @@ useHead({
     width: 100%;
     color: #fff;
     font-family: 'Raleway';
-    font-size: 46px;
+    font-size: 30px;
     font-style: normal;
     font-weight: 700;
     line-height: 120%;
     @media screen and (max-width: 655px) {
       margin-bottom: 25px;
-      font-size: 22px;
+      font-size: 18px;
     }
   }
   &__subtitle-2 {
     margin-bottom: 30px;
     color: #fff;
     font-family: 'Onest';
-    font-size: 22px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 700;
     line-height: 120%;
     @media screen and (max-width: 913px) {
-      font-size: 20px;
+      font-size: 16px;
     }
     @media screen and (max-width: 655px) {
-      font-size: 16px;
+      font-size: 14px;
     }
   }
   &__description {
     margin-bottom: 20px;
-    color: #cccccc;
-    font-family: 'Onest';
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 120%;
-    @media screen and (max-width: 913px) {
-      font-size: 18px;
-    }
-    @media screen and (max-width: 655px) {
-      font-size: 16px;
-    }
-  }
-  &__subtitle {
-    margin-bottom: 30px;
-    color: #fff;
-    font-family: 'Onest';
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 120%;
-    @media screen and (max-width: 913px) {
-      font-size: 22px;
-    }
-    @media screen and (max-width: 655px) {
-      font-size: 18px;
-    }
-  }
-  &__item-text {
     color: #cccccc;
     font-family: 'Onest';
     font-size: 18px;
@@ -157,6 +128,35 @@ useHead({
     }
     @media screen and (max-width: 655px) {
       font-size: 14px;
+    }
+  }
+  &__subtitle {
+    margin-bottom: 30px;
+    color: #fff;
+    font-family: 'Onest';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    @media screen and (max-width: 913px) {
+      font-size: 18px;
+    }
+    @media screen and (max-width: 655px) {
+      font-size: 16px;
+    }
+  }
+  &__item-text {
+    color: #cccccc;
+    font-family: 'Onest';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    @media screen and (max-width: 913px) {
+      font-size: 14px;
+    }
+    @media screen and (max-width: 655px) {
+      font-size: 12px;
     }
   }
   &__list {

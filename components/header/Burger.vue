@@ -144,7 +144,7 @@ const scrollToContacts = async () => {
     border-radius: 5px;
     border: 1px solid #fff;
     @media screen and (max-width: 655px) {
-      padding: 7px 15px;
+      padding: 2px 12px;
     }
     &-text {
       color: #fff;

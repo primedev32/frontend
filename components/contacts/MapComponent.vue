@@ -76,10 +76,10 @@ const handleClickOnBtnToMap = () => {
   }
 }
 .btn-map {
+  font-size: 14px;
   position: relative;
   z-index: 200000000000000;
   cursor: pointer;
-  padding: 5px 20px;
   color: #fff;
   border-radius: 11px;
   background: #0e7477;

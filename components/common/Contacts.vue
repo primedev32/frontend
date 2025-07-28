@@ -1,7 +1,7 @@
 <template>
   <section class="contacts" id="contacts">
     <div class="container contacts__wrapper" style="position: relative">
-      <img class="contacts__img" src="/img/home-contacts.webp" alt="img" />
+      <img class="contacts__img" src="/img/hero-about.webp" alt="img" />
       <h2 class="contacts__title" ref="title1">
         {{ title }}
       </h2>
@@ -266,27 +266,16 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .contacts {
-  padding: 130px 0;
+  padding: 80px 0;
   background: #fff;
   overflow: hidden;
-  position: relative; /* Обязательно добавляем позиционирование для использования z-index */
+  position: relative;
   z-index: 1;
-  // background-image: url('/img/home-contacts.webp');
-  // background-repeat: no-repeat;
-  // background-position: right 0px;
-  // background-size: contain;
-  @media screen and (max-width: 1500px) {
-    padding: 100px 0;
-  }
   @media screen and (max-width: 913px) {
-    background-size: contain;
     background-repeat: no-repeat;
     background-position: right 0px;
-    background-size: contain;
+    background-size: 250px auto;
     background-image: url('/img/home-contacts-913.webp');
-  }
-  @media screen and (max-width: 655px) {
-    padding: 80px 0;
   }
   &__fade-enter-active,
   &__fade-leave-active {
@@ -304,12 +293,16 @@ onMounted(() => {
   &__img {
     display: block;
     position: absolute;
-    top: -140px;
-    right: -17px;
+    top: 250px;
+    right: -117px;
     width: 343px;
     height: auto;
     object-fit: cover;
     z-index: -1;
+    @media screen and (max-width: 1500px) {
+      top: 200px;
+      right: -100px;
+    }
     @media screen and (max-width: 913px) {
       display: none;
     }
@@ -329,17 +322,17 @@ onMounted(() => {
     color: #000;
     text-align: center;
     font-family: 'Raleway';
-    font-size: 90px;
+    font-size: 50px;
     font-style: normal;
     font-weight: 700;
     line-height: 120%; /* 115.2px */
     text-transform: uppercase;
     z-index: 5;
     @media screen and (max-width: 1500px) {
-      font-size: 50px;
+      font-size: 40px;
     }
     @media screen and (max-width: 655px) {
-      font-size: 32px;
+      font-size: 28px;
     }
   }
   &__wrapper-form {
@@ -358,15 +351,15 @@ onMounted(() => {
     color: #000;
     text-align: center;
     font-family: 'Onest';
-    font-size: 20px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 120%; /* 24px */
     @media screen and (max-width: 1500px) {
-      font-size: 18px;
+      font-size: 14px;
     }
     @media screen and (max-width: 655px) {
-      font-size: 16px;
+      font-size: 12px;
       margin-bottom: 43px;
     }
   }
@@ -382,46 +375,46 @@ onMounted(() => {
     align-items: center;
     color: #000;
     font-family: 'Raleway';
-    font-size: 36px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: 120%; /* 43.2px */
     letter-spacing: -0.72px;
     text-transform: uppercase;
     @media screen and (max-width: 1500px) {
-      font-size: 24px;
+      font-size: 18px;
       margin-bottom: 36px;
     }
     @media screen and (max-width: 913px) {
       margin-bottom: 21px;
     }
     @media screen and (max-width: 655px) {
-      font-size: 20px;
+      font-size: 16px;
     }
     &-span {
       color: #000;
       font-family: 'Onest';
-      font-size: 44px;
+      font-size: 30px;
       letter-spacing: -0.88px;
       opacity: 0.2;
       @media screen and (max-width: 1500px) {
-        font-size: 34px;
+        font-size: 20px;
       }
       @media screen and (max-width: 655px) {
-        font-size: 24px;
+        font-size: 16px;
       }
     }
   }
   &__textarea {
-    margin-bottom: 60px;
-    padding: 20px;
+    margin-bottom: 42px;
+    padding: 15px;
     border-radius: 15px;
     background: #f0f0f0;
     width: 100%;
     overflow-x: hidden;
-    max-width: 497px;
-    height: 65px;
-    min-height: 65px;
+
+    height: 21px;
+    min-height: 51px;
     outline: none;
     overflow-y: hidden;
     resize: none;
@@ -433,23 +426,27 @@ onMounted(() => {
       font-weight: 400;
       line-height: normal;
       opacity: 0.5;
-      @media screen and (max-width: 463px) {
+      @media screen and (max-width: 1500px) {
         font-size: 14px;
+      }
+      @media screen and (max-width: 655px) {
+        font-size: 12px;
       }
     }
     @media screen and (max-width: 1500px) {
       padding: 15px;
-      max-width: 497px;
+
       height: 53px;
       min-height: 53px;
     }
     @media screen and (max-width: 655px) {
       margin-bottom: 45px;
+      padding: 12px;
+
+      height: 41px;
+      min-height: 40px;
     }
     @media screen and (max-width: 463px) {
-      padding: 13px;
-      height: 45px;
-      min-height: 45px;
       font-size: 14px;
     }
   }
@@ -457,6 +454,9 @@ onMounted(() => {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    @media screen and (max-width: 655px) {
+      gap: 20px;
+    }
   }
   &__input-wrapper-2 {
     display: flex;
@@ -474,14 +474,20 @@ onMounted(() => {
     background: #f0f0f0;
     padding: 20px;
     width: 100%;
-    height: 65px;
-    min-height: 65px;
+    height: 21px;
+    min-height: 51px;
     outline: none;
     @media screen and (max-width: 1500px) {
       padding: 15px;
       max-width: 497px;
       height: 53px;
       min-height: 53px;
+    }
+    @media screen and (max-width: 655px) {
+      padding: 12px;
+      max-width: 497px;
+      height: 41px;
+      min-height: 40px;
     }
     @media screen and (max-width: 463px) {
       padding: 13px;
@@ -497,8 +503,11 @@ onMounted(() => {
       font-weight: 400;
       line-height: normal;
       opacity: 0.5;
-      @media screen and (max-width: 463px) {
+      @media screen and (max-width: 1500px) {
         font-size: 14px;
+      }
+      @media screen and (max-width: 655px) {
+        font-size: 12px;
       }
     }
     &--error {
@@ -523,19 +532,19 @@ onMounted(() => {
     color: #000;
     text-align: center;
     font-family: 'Raleway';
-    font-size: 22px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
     @media screen and (max-width: 655px) {
-      font-size: 18px;
+      font-size: 14px;
     }
   }
   &__input-field {
     width: 100%;
   }
   &__btn-select {
-    padding: 15px 24px;
+    padding: 11px 18px;
     border-radius: 15px;
     background: #f0f0f0;
     transition: background 0.3s ease-in-out;
@@ -550,18 +559,15 @@ onMounted(() => {
     color: #000;
     text-align: center;
     font-family: 'Onest';
-    font-size: 18px;
+    font-size: 16px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     line-height: normal;
     text-transform: uppercase;
     @media screen and (max-width: 1500px) {
-      font-size: 16px;
+      font-size: 14px;
     }
     @media screen and (max-width: 655px) {
-      font-size: 13px;
-    }
-    @media screen and (max-width: 463px) {
       font-size: 12px;
     }
   }
@@ -592,6 +598,9 @@ onMounted(() => {
     font-weight: 400;
     line-height: normal;
     opacity: 0.5;
+    @media screen and (max-width: 655px) {
+      font-size: 12px;
+    }
   }
   &__policy {
     color: #000;

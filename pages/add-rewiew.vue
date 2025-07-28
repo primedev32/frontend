@@ -116,7 +116,7 @@ const handleSubmit = async (_values: any, { resetForm }: any) => {
 
 <style lang="scss" scoped>
 .add-review {
-  padding: 0 0 50px 0;
+  padding: 0 0 40px 0;
   @media screen and (max-width: 913px) {
     padding: 0 0 0 0;
   }
@@ -132,18 +132,18 @@ const handleSubmit = async (_values: any, { resetForm }: any) => {
   &__logo {
     color: #fff;
     font-family: 'Onest';
-    font-size: 32px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 700;
     line-height: 120%; /* 38.4px */
     text-decoration: none;
     @media screen and (max-width: 913px) {
-      font-size: 25px;
+      font-size: 20px;
     }
   }
   &__title {
-    padding-top: 100px;
-    font-size: 32px;
+    padding-top: 80px;
+    font-size: 24px;
     font-weight: 700;
     line-height: 1.2;
     text-align: center;
@@ -173,7 +173,7 @@ const handleSubmit = async (_values: any, { resetForm }: any) => {
   &__input,
   &__textarea {
     width: 100%;
-    padding: 15px;
+    padding: 10px;
     border-radius: 15px;
     background: #f0f0f0;
     border: none;
@@ -185,6 +185,7 @@ const handleSubmit = async (_values: any, { resetForm }: any) => {
     &::placeholder {
       color: #000;
       opacity: 0.5;
+      font-size: 14px;
     }
 
     &--error {
@@ -205,10 +206,10 @@ const handleSubmit = async (_values: any, { resetForm }: any) => {
   }
 
   &__textarea {
-    min-height: 150px;
+    min-height: 100px;
     resize: none;
     @media screen and (max-width: 913px) {
-      min-height: 100px;
+      min-height: 80px;
     }
   }
 
@@ -219,7 +220,7 @@ const handleSubmit = async (_values: any, { resetForm }: any) => {
   }
 
   &__submit {
-    padding: 15px;
+    padding: 10px;
     border-radius: 15px;
     background: #ffcb9b;
     border: none;
@@ -234,7 +235,7 @@ const handleSubmit = async (_values: any, { resetForm }: any) => {
       background: #d6b089;
     }
     @media screen and (max-width: 913px) {
-      font-size: 16px;
+      font-size: 14px;
       padding: 10px;
     }
   }
@@ -242,7 +243,7 @@ const handleSubmit = async (_values: any, { resetForm }: any) => {
   &__status {
     text-align: center;
     font-family: 'Onest';
-    font-size: 16px;
+    font-size: 14px;
     color: #ff3e29;
 
     &--success {

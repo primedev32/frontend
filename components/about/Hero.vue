@@ -66,14 +66,11 @@ onMounted(() => {
 <style lang="scss" scoped>
 .about {
   width: 100%;
-  min-height: 791px;
+  min-height: 650px;
   position: relative;
   overflow: hidden;
   background: #fff;
   z-index: 1;
-  @media screen and (max-width: 1500px) {
-    min-height: 651px;
-  }
   @media screen and (max-width: 913px) {
     min-height: 627px;
   }
@@ -86,6 +83,12 @@ onMounted(() => {
   @media screen and (max-width: 463px) {
     min-height: 438px;
   }
+  // @media screen and (max-width: 655px) {
+  //   min-height: 462px;
+  // }
+  // @media screen and (max-width: 463px) {
+  //   min-height: 438px;
+  // }
   &__wrapper-imgage {
     position: relative;
     margin: 0 auto;
@@ -97,21 +100,21 @@ onMounted(() => {
     margin: 0;
     top: 50%;
     right: -20px;
-    transform: translate(0%, -17%);
+    transform: translate(0%, -21%);
     z-index: -1;
-    max-width: 900px;
+    max-width: 600px;
     height: auto;
     @media screen and (max-width: 1500px) {
-      max-width: 600px;
-      transform: translate(0%, -21%);
+      max-width: 500px;
+      transform: translate(0%, -24%);
     }
     @media screen and (max-width: 817px) {
       max-width: 400px;
       transform: translate(0%, -27%);
     }
-    @media screen and (max-width: 463px) {
+    @media screen and (max-width: 655px) {
       max-width: 300px;
-      transform: translate(0%, -37%);
+      transform: translate(0%, -34%);
     }
   }
   &__description-wrapper {
@@ -120,54 +123,61 @@ onMounted(() => {
     position: absolute;
     top: 50%;
     left: 0%;
-    transform: translate(0%, 70%);
+    transform: translate(0%, 152px);
+    @media screen and (max-width: 1500px) {
+      transform: translate(0%, 192px);
+    }
     @media screen and (max-width: 1024px) {
       padding: 0 40px;
+      transform: translate(0%, 232px);
+    }
+    @media screen and (max-width: 655px) {
+      transform: translate(0%, 180px);
     }
     @media screen and (max-width: 480px) {
       padding: 0 15px;
     }
     @media screen and (max-width: 463px) {
-      transform: translate(0%, 152px);
+      // transform: translate(0%, 162px);
     }
   }
   &__title {
     color: #000;
     font-family: 'Raleway';
-    font-size: 76px;
+    font-size: 56px;
     font-style: normal;
     font-weight: 700;
     line-height: 120%; /* 115.2px */
     text-transform: uppercase;
     @media screen and (max-width: 1500px) {
-      font-size: 66px;
+      font-size: 46px;
     }
     @media screen and (max-width: 1022px) {
-      font-size: 56px;
+      font-size: 36px;
     }
     @media screen and (max-width: 834px) {
-      font-size: 40px;
+      font-size: 26px;
       margin-bottom: 20px;
     }
     @media screen and (max-width: 655px) {
-      font-size: 30px;
+      font-size: 16px;
       margin-bottom: 10px;
     }
     @media screen and (max-width: 463px) {
-      font-size: 25px;
+      font-size: 14px;
       margin-bottom: 5px;
     }
   }
   &__description {
     color: #000;
     font-family: 'Onest';
-    font-size: 20px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 120%; /* 24px */
+    max-width: 500px;
     @media screen and (max-width: 1500px) {
-      font-size: 18px;
-      max-width: 500px;
+      font-size: 16px;
     }
     @media screen and (max-width: 655px) {
       font-size: 16px;

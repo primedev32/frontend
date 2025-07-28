@@ -146,15 +146,9 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .marketing {
-  padding: 130px 0;
+  padding: 80px 0;
   background: #222624;
   overflow: hidden;
-  @media screen and (max-width: 1500px) {
-    padding: 100px 0;
-  }
-  @media screen and (max-width: 655px) {
-    padding: 80px 0;
-  }
   @media screen and (max-width: 463px) {
     padding: 80px 0 30px 0;
   }
@@ -162,19 +156,19 @@ onMounted(() => {
     margin-bottom: 10px;
     color: #fff;
     font-family: 'Raleway';
-    font-size: 90px;
+    font-size: 50px;
     font-style: normal;
     font-weight: 700;
     line-height: 120%; /* 115.2px */
     text-transform: uppercase;
     @media screen and (max-width: 1500px) {
-      font-size: 45px;
+      font-size: 40px;
     }
     @media screen and (max-width: 655px) {
-      font-size: 32px;
+      font-size: 28px;
     }
     @media screen and (max-width: 463px) {
-      font-size: 24px;
+      font-size: 20px;
     }
   }
   &__wrapper {
@@ -202,18 +196,18 @@ onMounted(() => {
   }
   &__marketing-wrapper {
     position: relative;
-    padding: 201px 40px 20px 20px;
+    padding: 102px 40px 20px 20px;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
-    min-height: 417px;
+    min-height: 324px;
     height: 100%;
     @media screen and (max-width: 1500px) {
-      padding: 139px 40px 20px 20px;
-      min-height: 349px;
+      padding: 92px 40px 20px 20px;
+      min-height: 253px;
     }
     @media screen and (max-width: 655px) {
-      min-height: 302px;
+      min-height: 252px;
     }
   }
   &__swiper-content {
@@ -222,47 +216,44 @@ onMounted(() => {
   }
   &__swiper-title {
     margin-bottom: 10px;
-    min-height: 88px;
+    min-height: 61px;
     font-family: 'Raleway';
-    font-size: 36px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 700;
     line-height: 120%; /* 43.2px */
     letter-spacing: -0.72px;
     text-transform: uppercase;
     @media screen and (max-width: 1500px) {
-      font-size: 24px;
-      min-height: 58px;
+      font-size: 20px;
+      min-height: 45px;
     }
     @media screen and (max-width: 655px) {
-      min-height: 38px;
+      min-height: 34px;
     }
     @media screen and (max-width: 463px) {
-      font-size: 20px;
+      font-size: 18px;
     }
   }
   &__swiper-description {
     font-family: 'Onest';
-    font-size: 20px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 120%; /* 24px */
     @media screen and (max-width: 1500px) {
-      font-size: 16px;
+      font-size: 14px;
     }
     @media screen and (max-width: 655px) {
-      font-size: 14px;
+      font-size: 12px;
     }
   }
   &__swiper-bool {
     position: absolute;
     top: 20px;
     left: 20px;
-    width: 90px;
+    width: 55px;
     height: auto;
-    @media screen and (max-width: 1500px) {
-      width: 72px;
-    }
   }
   &__bordered {
     border: 1px solid #fff;
@@ -271,11 +262,11 @@ onMounted(() => {
     background-image: url('/svg/arrow-swiper-next.svg');
     background-repeat: no-repeat;
     background-size: contain;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     @media screen and (max-width: 1500px) {
-      width: 40px;
-      height: 40px;
+      width: 30px;
+      height: 30px;
     }
     &:disabled {
       opacity: 0.3;
@@ -285,11 +276,11 @@ onMounted(() => {
     background-image: url('/svg/arrow-swiper-prev.svg');
     background-repeat: no-repeat;
     background-size: contain;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     @media screen and (max-width: 1500px) {
-      width: 40px;
-      height: 40px;
+      width: 30px;
+      height: 30px;
     }
     &:disabled {
       opacity: 0.3;

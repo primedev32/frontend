@@ -2,7 +2,7 @@
   <CommonLoadPage v-if="loading" />
   <div v-else>
     <HomeHero />
-    <HomeAdvantage />
+    <!-- <HomeAdvantage /> -->
     <HomeProjects />
     <HomeTypesSite />
     <HomeMarketing />

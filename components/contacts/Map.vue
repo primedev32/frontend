@@ -43,12 +43,12 @@
 
 <style lang="scss" scoped>
 .maps {
-  padding: 160px 0;
+  padding: 130px 0;
   @media screen and (max-width: 1500px) {
     padding: 100px 0;
   }
   @media screen and (max-width: 463px) {
-    padding: 80px 0;
+    padding: 50px 0;
   }
   &__wrapper {
     display: grid;
@@ -62,19 +62,19 @@
     margin-bottom: 30px;
     color: #fff;
     font-family: 'Raleway';
-    font-size: 59px;
+    font-size: 56px;
     font-style: normal;
     font-weight: 700;
     line-height: 120%; /* 115.2px */
     text-transform: uppercase;
     @media screen and (max-width: 1500px) {
-      font-size: 55px;
+      font-size: 46px;
     }
     @media screen and (max-width: 655px) {
-      font-size: 40px;
+      font-size: 26px;
     }
     @media screen and (max-width: 463px) {
-      font-size: 24px;
+      font-size: 14px;
       margin-bottom: 20px;
     }
   }
@@ -86,17 +86,14 @@
     margin-bottom: 30px;
     color: #fff;
     font-family: 'Onest';
-    font-size: 20px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 120%; /* 28.8px */
     @media screen and (max-width: 1500px) {
-      font-size: 18px;
-    }
-    @media screen and (max-width: 655px) {
       font-size: 16px;
     }
-    @media screen and (max-width: 463px) {
+    @media screen and (max-width: 655px) {
       font-size: 14px;
     }
   }
@@ -104,18 +101,15 @@
     color: #fff;
     text-align: right;
     font-family: 'Onest';
-    font-size: 25px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 500;
     line-height: 120%; /* 38.4px */
     @media screen and (max-width: 1500px) {
-      font-size: 22px;
+      font-size: 16px;
     }
     @media screen and (max-width: 655px) {
-      font-size: 20px;
-    }
-    @media screen and (max-width: 463px) {
-      font-size: 18px;
+      font-size: 14px;
     }
   }
   &__list {
@@ -136,10 +130,9 @@
     }
   }
   &__img-social {
-    @media screen and (max-width: 1500px) {
-      width: 30px;
-      height: auto;
-    }
+    width: 30px;
+    height: auto;
+
     @media screen and (max-width: 655px) {
       width: 25px;
     }

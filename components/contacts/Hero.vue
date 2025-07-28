@@ -72,7 +72,7 @@ onMounted(() => {
 <style lang="scss" scoped>
 .contacts {
   width: 100%;
-  min-height: 791px;
+  min-height: 650px;
   position: relative;
   overflow: hidden;
   background-image: url('/img/hero-contacts.webp');
@@ -93,14 +93,12 @@ onMounted(() => {
     z-index: -1;
   }
   @media screen and (max-width: 1500px) {
-    min-height: 651px;
     &::after {
       width: 1138px;
       height: 512px;
     }
   }
   @media screen and (max-width: 1500px) {
-    min-height: 651px;
     &::after {
       display: none;
     }
@@ -121,37 +119,34 @@ onMounted(() => {
     color: #fff;
     text-align: center;
     font-family: 'Raleway';
-    font-size: 86px;
+    font-size: 56px;
     font-style: normal;
     font-weight: 700;
     line-height: 120%; /* 115.2px */
     text-transform: uppercase;
     @media screen and (max-width: 1500px) {
-      font-size: 66px;
+      font-size: 46px;
       margin-bottom: 10px;
     }
     @media screen and (max-width: 655px) {
-      font-size: 30px;
+      font-size: 26px;
     }
     @media screen and (max-width: 463px) {
-      font-size: 25px;
+      font-size: 14px;
     }
   }
   &__description {
     color: #fff;
     text-align: center;
     font-family: 'Onest';
-    font-size: 24px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: 120%; /* 28.8px */
     @media screen and (max-width: 1500px) {
-      font-size: 20px;
+      font-size: 16px;
     }
     @media screen and (max-width: 655px) {
-      font-size: 18px;
-    }
-    @media screen and (max-width: 463px) {
       font-size: 14px;
     }
   }
@@ -161,21 +156,25 @@ onMounted(() => {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
-    min-width: 800px;
+    min-width: 500px;
     height: auto;
-    @media screen and (max-width: 1500px) {
-      min-width: 600px;
-    }
-    @media screen and (max-width: 817px) {
-      transform: translate(-50%, -46%);
+    @media screen and (max-width: 913px) {
+      min-width: 400px;
     }
     @media screen and (max-width: 655px) {
-      min-width: 500px;
-      transform: translate(-50%, -44%);
+      min-width: 320px;
+      transform: translate(-50%, -40%);
     }
-    @media screen and (max-width: 463px) {
-      min-width: 450px;
-    }
+    // @media screen and (max-width: 817px) {
+    //   transform: translate(-50%, -46%);
+    // }
+    // @media screen and (max-width: 655px) {
+    //   min-width: 500px;
+    //   transform: translate(-50%, -44%);
+    // }
+    // @media screen and (max-width: 463px) {
+    //   min-width: 450px;
+    // }
   }
   &__wrapper {
     position: absolute;
@@ -190,12 +189,12 @@ onMounted(() => {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, 20%);
     @media screen and (max-width: 655px) {
       min-width: 400px;
     }
     @media screen and (max-width: 463px) {
-      transform: translate(-50%, 65%);
+      transform: translate(-50%, 43%);
       min-width: 271px;
     }
   }

@@ -11,7 +11,7 @@
       </button>
       <ul class="list-reset select__list" v-if="showMenu">
         <li
-          v-for="(item, index) in availableLocales"
+          v-for="item in availableLocales"
           :key="item.code"
           class="select__item"
         >
@@ -78,7 +78,7 @@ const availableLocales = computed<AvailableLocales[]>(() => {
 .select__link {
   color: #fff;
   font-family: 'Inter';
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 130%;
@@ -93,11 +93,14 @@ const availableLocales = computed<AvailableLocales[]>(() => {
   gap: 10px;
   color: #fff;
   font-family: 'Inter';
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 130%; /* 26px */
   letter-spacing: 0.6px;
   text-transform: capitalize;
+  @media screen and (max-width: 655px) {
+    font-size: 14px;
+  }
 }
 </style>

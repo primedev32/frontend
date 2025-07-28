@@ -57,6 +57,8 @@
 </template>
 
 <script lang="ts" setup>
+import { apiReviews } from '~/utils/api.ts'
+
 const { $gsap } = useNuxtApp()
 const { locale } = useI18n()
 
@@ -180,36 +182,33 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .reviews {
-  padding-bottom: 150px;
+  padding-bottom: 100px;
   overflow: hidden;
   @media screen and (max-width: 1500px) {
-    padding-bottom: 100px;
-  }
-  @media screen and (max-width: 655px) {
     padding-bottom: 80px;
   }
   &__title {
-    margin-bottom: 100px;
+    margin-bottom: 80px;
     color: #fff;
     font-family: 'Raleway';
     text-align: right;
-    font-size: 90px;
+    font-size: 50px;
     font-style: normal;
     font-weight: 700;
     line-height: 120%; /* 115.2px */
     text-transform: uppercase;
     @media screen and (max-width: 1500px) {
-      font-size: 45px;
-      margin-bottom: 80px;
+      font-size: 40px;
+      margin-bottom: 60px;
     }
     @media screen and (max-width: 767px) {
       margin-bottom: 50px;
     }
     @media screen and (max-width: 655px) {
-      font-size: 32px;
+      font-size: 28px;
     }
     @media screen and (max-width: 463px) {
-      font-size: 24px;
+      font-size: 20px;
     }
   }
   &__swiper-description {
@@ -217,38 +216,38 @@ onMounted(() => {
     width: 100%;
     color: #000;
     font-family: 'Onest';
-    font-size: 20px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 120%; /* 24px */
     @media screen and (max-width: 1500px) {
-      font-size: 16px;
+      font-size: 14px;
     }
     @media screen and (max-width: 655px) {
-      font-size: 14px;
+      font-size: 12px;
     }
   }
   &__swiper-title {
     margin-top: auto;
     color: #000;
     font-family: 'Onest';
-    font-size: 20px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 600;
     line-height: 120%; /* 24px */
     @media screen and (max-width: 1500px) {
-      font-size: 16px;
+      font-size: 14px;
     }
   }
   &__swiper-avatar {
     position: absolute;
     top: 20px;
     right: 20px;
-    width: 140px;
-    height: 140px;
+    width: 55px;
+    height: 55px;
     @media screen and (max-width: 1500px) {
-      width: 90px;
-      height: 90px;
+      width: 40px;
+      height: 40px;
     }
   }
   &__wrapper {
@@ -258,30 +257,30 @@ onMounted(() => {
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 240px 20px 20px 20px;
+    padding: 113px 20px 20px 20px;
     border-radius: 15px;
-    min-height: 456px;
+    min-height: 311px;
     width: 100%;
     height: 100%;
     background: url('/img/quote-small.webp') no-repeat 20px 20px / 40px auto,
-      url('/img/quote.webp') no-repeat 20px 30px / 170px auto, #fff;
+      url('/img/quote.webp') no-repeat 20px 30px / 95px auto, #fff;
 
     @media screen and (max-width: 1500px) {
-      padding: 169px 20px 20px 20px;
-      min-height: 384px;
+      padding: 102px 20px 20px 20px;
+      min-height: 276px;
       background: url(/img/quote-small.webp) no-repeat 20px 20px / 35px auto,
-        url(/img/quote.webp) no-repeat 20px 30px / 115px auto, #fff;
+        url(/img/quote.webp) no-repeat 20px 30px / 90px auto, #fff;
     }
     @media screen and (max-width: 1200px) {
-      min-height: 325px;
+      min-height: 250px;
     }
     @media screen and (max-width: 463px) {
       background: url(/img/quote-small.webp) no-repeat 20px 20px / 35px auto,
-        url(/img/quote.webp) no-repeat 20px 30px / 100px auto, #fff;
+        url(/img/quote.webp) no-repeat 20px 30px / 90px auto, #fff;
     }
   }
   &__buttons {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -291,8 +290,8 @@ onMounted(() => {
     background-image: url('/svg/arrow-swiper-next.svg');
     background-repeat: no-repeat;
     background-size: contain;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     @media screen and (max-width: 1500px) {
       width: 40px;
       height: 40px;
@@ -308,11 +307,11 @@ onMounted(() => {
     background-image: url('/svg/arrow-swiper-prev.svg');
     background-repeat: no-repeat;
     background-size: contain;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     @media screen and (max-width: 1500px) {
-      width: 40px;
-      height: 40px;
+      width: 30px;
+      height: 30px;
     }
     @media screen and (max-width: 767px) {
       display: none;
@@ -322,12 +321,12 @@ onMounted(() => {
     }
   }
   &__swiper-pagination-progress {
-    width: 506px;
+    width: 423px;
     height: 10px;
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.2);
     @media screen and (max-width: 1500px) {
-      width: 423px;
+      width: 352px;
       height: 7px;
     }
   }
@@ -343,12 +342,12 @@ onMounted(() => {
     display: inline-block;
     color: #fff;
     font-family: 'Onest';
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
     line-height: 120%;
     text-decoration: none;
     @media screen and (max-width: 655px) {
-      font-size: 16px;
+      font-size: 14px;
     }
     &-wrapper {
       display: flex;
@@ -367,8 +366,8 @@ onMounted(() => {
     }
   }
   &__icon {
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
     transition: transform 0.3s ease-in-out;
     @media screen and (max-width: 655px) {
       width: 30px;

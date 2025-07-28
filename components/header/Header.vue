@@ -152,6 +152,7 @@ const toggleBurger = () => {
     z-index: 999999999999;
     @media screen and (max-width: 913px) {
       height: 18px;
+      width: 25px;
     }
     span {
       display: block;
@@ -159,7 +160,7 @@ const toggleBurger = () => {
       background-color: #fff;
       transition: transform 0.3s, opacity 0.3s;
       @media screen and (max-width: 913px) {
-        height: 2px;
+        height: 1px;
       }
     }
     &.open {
@@ -179,12 +180,12 @@ const toggleBurger = () => {
   &__logo {
     color: #fff;
     font-family: 'Onest';
-    font-size: 32px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 700;
     line-height: 120%; /* 38.4px */
     @media screen and (max-width: 913px) {
-      font-size: 25px;
+      font-size: 18px;
     }
     &-link {
       text-decoration: none;
@@ -201,17 +202,17 @@ const toggleBurger = () => {
     text-decoration: none;
     color: #fff;
     font-family: 'Onest';
-    font-size: 24px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     &::after {
       content: '';
       position: absolute;
-      top: 31px;
+      top: 27px;
       left: 0;
       width: 100%;
-      height: 2px;
+      height: 1px;
       background-color: #fff;
       opacity: 0;
       transform: scaleX(0);
@@ -222,12 +223,12 @@ const toggleBurger = () => {
       transform: scaleX(1);
     }
     @media screen and (max-width: 1500px) {
-      font-size: 18px;
+      font-size: 16px;
     }
   }
   &__btn {
     position: relative;
-    padding: 18px 50px;
+    padding: 11px 35px;
     border-radius: 5px;
 
     cursor: pointer;
@@ -253,7 +254,7 @@ const toggleBurger = () => {
       -webkit-mask-composite: xor;
     }
     @media screen and (max-width: 1500px) {
-      padding: 10px 20px;
+      padding: 7px 17px;
     }
     @media screen and (max-width: 1086px) {
       display: none;
@@ -281,12 +282,12 @@ const toggleBurger = () => {
     color: #fff;
     text-align: center;
     font-family: 'Onest';
-    font-size: 20px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     @media screen and (max-width: 1500px) {
-      font-size: 18px;
+      font-size: 16px;
     }
   }
   &__switch-lang {

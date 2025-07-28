@@ -52,7 +52,7 @@ onMounted(() => {
 <style lang="scss" scoped>
 .adaptation {
   background: #fff;
-  padding: 130px 0;
+  padding: 100px 0;
   @media screen and (max-width: 1500px) {
     padding: 80px 0;
   }
@@ -91,19 +91,19 @@ onMounted(() => {
   &__title {
     color: #000;
     font-family: 'Raleway';
-    font-size: 90px;
+    font-size: 60px;
     font-style: normal;
     font-weight: 700;
     line-height: 120%; /* 115.2px */
     text-transform: uppercase;
     @media screen and (max-width: 1500px) {
-      font-size: 80px;
-    }
-    @media screen and (max-width: 1200px) {
       font-size: 50px;
     }
-    @media screen and (max-width: 655px) {
+    @media screen and (max-width: 1200px) {
       font-size: 40px;
+    }
+    @media screen and (max-width: 655px) {
+      font-size: 30px;
     }
     &-span {
       font-family: 'Onest';
@@ -113,21 +113,15 @@ onMounted(() => {
     max-width: 500px;
     color: #000;
     font-family: 'Raleway';
-    font-size: 22px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 120%; /* 28.8px */
     @media screen and (max-width: 1500px) {
-      font-size: 20px;
+      font-size: 14px;
     }
     @media screen and (max-width: 1200px) {
-      font-size: 18px;
-    }
-    @media screen and (max-width: 655px) {
-      font-size: 16px;
-    }
-    @media screen and (max-width: 463px) {
-      font-size: 14px;
+      font-size: 12px;
     }
   }
 }

@@ -119,54 +119,50 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .types-site {
-  padding: 130px 0;
+  padding: 80px 0;
   background: #fff;
   overflow: hidden;
-  @media screen and (max-width: 1500px) {
-    padding: 100px 0;
-  }
-  @media screen and (max-width: 655px) {
-    padding: 80px 0;
-  }
+
   &__title {
     color: #000;
     font-family: 'Raleway';
-    font-size: 90px;
+    font-size: 50px;
     font-style: normal;
+    text-align: center;
     font-weight: 700;
     line-height: 120%; /* 115.2px */
     text-transform: uppercase;
     @media screen and (max-width: 1500px) {
-      font-size: 50px;
+      font-size: 40px;
     }
     @media screen and (max-width: 655px) {
-      font-size: 32px;
+      font-size: 28px;
     }
     @media screen and (max-width: 463px) {
-      font-size: 24px;
+      font-size: 20px;
       text-align: left;
     }
   }
   &__title-2 {
     margin-bottom: 100px;
     color: #000;
-    text-align: right;
+    text-align: center;
     font-family: 'Raleway';
-    font-size: 90px;
+    font-size: 50px;
     font-style: normal;
     font-weight: 300;
     line-height: 120%; /* 115.2px */
     text-transform: uppercase;
     @media screen and (max-width: 1500px) {
-      font-size: 50px;
+      font-size: 40px;
       margin-bottom: 80px;
     }
     @media screen and (max-width: 655px) {
-      font-size: 32px;
+      font-size: 28px;
       margin-bottom: 50px;
     }
     @media screen and (max-width: 463px) {
-      font-size: 24px;
+      font-size: 20px;
       text-align: right;
     }
   }
@@ -183,24 +179,24 @@ onMounted(() => {
   }
   &__item {
     position: relative;
-    padding: 330px 30px 30px 30px;
+    padding: 228px 30px 30px 30px;
     display: flex;
     flex-direction: column;
     width: 100%;
-    min-height: 654px;
+    min-height: 542px;
     border-radius: 15px;
     overflow: hidden;
     @media screen and (max-width: 1500px) {
-      padding: 244px 15px 30px 15px;
-      min-height: 562px;
+      padding: 215px 15px 30px 15px;
+      min-height: 486px;
     }
     @media screen and (max-width: 1086px) {
-      padding: 197px 15px 30px 15px;
-      min-height: 444px;
+      padding: 132px 15px 30px 15px;
+      min-height: 361px;
     }
     @media screen and (max-width: 655px) {
-      padding: 191px 15px 30px 15px;
-      min-height: 402px;
+      padding: 138px 15px 30px 15px;
+      min-height: 364px;
     }
   }
 
@@ -208,14 +204,14 @@ onMounted(() => {
     margin-bottom: 10px;
     min-height: 73px;
     font-family: 'Raleway';
-    font-size: 30px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 700;
-    line-height: 120%; /* 43.2px */
+    line-height: normal; /* 43.2px */
     text-transform: uppercase;
     z-index: 1;
     @media screen and (max-width: 1500px) {
-      font-size: 20px;
+      font-size: 18px;
       min-height: 52px;
     }
     @media screen and (max-width: 655px) {
@@ -225,13 +221,13 @@ onMounted(() => {
   &__item-description {
     margin-bottom: 32px;
     font-family: 'Onest';
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 120%; /* 21.6px */
     z-index: 2;
     @media screen and (max-width: 1500px) {
-      font-size: 14px;
+      font-size: 12px;
     }
     @media screen and (max-width: 1086px) {
       margin-bottom: 10px;
@@ -241,21 +237,21 @@ onMounted(() => {
     margin-bottom: 32px;
     font-family: 'Onest';
     text-align: right;
-    font-size: 36px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: 120%; /* 43.2px */
     text-transform: uppercase;
     z-index: 3;
     @media screen and (max-width: 1500px) {
-      font-size: 24px;
+      font-size: 18px;
     }
     @media screen and (max-width: 1086px) {
       margin-bottom: 16px;
     }
   }
   &__item-btn {
-    padding: 10px 20px;
+    padding: 7px 14px;
     border-radius: 5px;
     z-index: 4;
     transition: background 0.3s ease-out, color 0.3s ease-out,
@@ -278,34 +274,33 @@ onMounted(() => {
     &.img-1 {
       top: 0;
       left: 0;
-      width: 390px;
+      width: 260px;
     }
     &.img-2 {
       top: 0;
-      left: 40px;
-      width: 390px;
+      left: 68px;
+      width: 260px;
     }
     &.img-3 {
       top: 0;
       left: 0;
-      width: 430px;
+      width: 327px;
     }
     @media screen and (max-width: 1086px) {
       &.img-1 {
         top: 0px;
         left: 0px;
-        width: 200px;
+        width: 133px;
       }
       &.img-2 {
         top: 0px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 250px;
+        left: -7px;
+        width: 166px;
       }
       &.img-3 {
         top: 0px;
         left: 0px;
-        width: 320px;
+        width: 218px;
       }
     }
   }

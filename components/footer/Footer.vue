@@ -70,9 +70,9 @@
   }
   &__list {
     display: flex;
-    gap: 80px;
-    @media screen and (max-width: 817px) {
-      gap: 40px;
+    gap: 60px;
+    @media screen and (max-width: 1086px) {
+      gap: 36px;
     }
     @media screen and (max-width: 463px) {
       gap: 20px;
@@ -81,12 +81,12 @@
   &__title {
     color: #fff;
     font-family: 'Onest';
-    font-size: 32px;
+    font-size: 25px;
     font-style: normal;
     font-weight: 700;
     line-height: 120%; /* 38.4px */
     @media screen and (max-width: 1500px) {
-      font-size: 24px;
+      font-size: 20px;
     }
   }
   &__wrapper-2 {
@@ -104,7 +104,7 @@
     position: relative;
     color: #fff;
     font-family: 'Onest';
-    font-size: 24px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -126,10 +126,10 @@
       transform: scaleX(1);
     }
     @media screen and (max-width: 1500px) {
-      font-size: 18px;
+      font-size: 16px;
     }
     @media screen and (max-width: 463px) {
-      font-size: 15px;
+      font-size: 14px;
     }
   }
   &__wrapper-policy {
@@ -140,29 +140,29 @@
   &__wrapper-policy-link {
     color: #fff;
     font-family: 'Onest';
-    font-size: 24px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 120%; /* 28.8px */
     @media screen and (max-width: 1500px) {
-      font-size: 18px;
+      font-size: 16px;
     }
     @media screen and (max-width: 463px) {
-      font-size: 15px;
+      font-size: 14px;
     }
   }
   &__wrapper-policy-text {
     color: #fff;
     font-family: 'Onest';
-    font-size: 24px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     @media screen and (max-width: 1500px) {
-      font-size: 18px;
+      font-size: 16px;
     }
     @media screen and (max-width: 463px) {
-      font-size: 15px;
+      font-size: 14px;
     }
   }
   &__list-social {
@@ -173,7 +173,7 @@
     position: relative;
     color: #fff;
     font-family: 'Onest';
-    font-size: 32px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 500;
     line-height: 120%; /* 38.4px */
@@ -195,45 +195,43 @@
       transform: scaleX(1);
     }
     @media screen and (max-width: 1500px) {
-      font-size: 24px;
+      font-size: 18px;
     }
     @media screen and (max-width: 463px) {
-      font-size: 15px;
+      font-size: 14px;
     }
   }
   &__title-2 {
     color: #fff;
     text-align: center;
     font-family: 'Raleway';
-    font-size: clamp(60px, 15vw, 285px);
+    font-size: clamp(40px, 10vw, 150px);
     font-style: normal;
     font-weight: 800;
-    line-height: 120%; /* 342px */
+    line-height: normal; /* 342px */
     letter-spacing: 31.35px;
     text-transform: uppercase;
     opacity: 0.15;
     @media screen and (max-width: 1500px) {
-      font-size: clamp(60px, 13vw, 285px);
+      font-size: clamp(40px, 10vw, 150px);
     }
     @media screen and (max-width: 913px) {
-      font-size: clamp(20px, 10vw, 285px);
+      font-size: clamp(20px, 10vw, 150px);
       width: 100%;
     }
     @media screen and (max-width: 655px) {
-      font-size: clamp(20px, 8vw, 285px);
+      font-size: clamp(20px, 8vw, 150px);
       letter-spacing: 19.35px;
-      text-align: left;
+      text-align: center;
     }
   }
   &__img-social {
     opacity: 0.5;
+    width: 25px;
+    height: auto;
     transition: opacity 0.3s ease-in-out;
     &:hover {
       opacity: 1;
-    }
-    @media screen and (max-width: 1500px) {
-      width: 25px;
-      height: auto;
     }
   }
   &__contacts {

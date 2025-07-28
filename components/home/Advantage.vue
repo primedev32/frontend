@@ -170,17 +170,17 @@ onMounted(() => {
   &__item {
     display: flex;
     flex-direction: column;
-    max-width: 665px;
-    min-height: 423px;
+    max-width: 548px;
+    min-height: 295px;
     padding: 21px 35px 40px 35px;
     border-radius: 15px;
     @media screen and (max-width: 1500px) {
       max-width: 467px;
-      min-height: 354px;
+      min-height: 295px;
     }
     @media screen and (max-width: 913px) {
       padding: 21px 21px 40px 21px;
-      min-height: 322px;
+      min-height: 268px;
     }
     @media screen and (max-width: 817px) {
       width: 100%;
@@ -190,7 +190,7 @@ onMounted(() => {
     }
     &-wrapper {
       margin-top: auto;
-      max-width: 550px;
+      max-width: 467px;
       @media screen and (max-width: 817px) {
         margin-top: 0;
       }
@@ -198,16 +198,16 @@ onMounted(() => {
     &-number {
       color: #000;
       font-family: 'Raleway';
-      font-size: 135px;
+      font-size: 80px;
       font-style: normal;
       font-weight: 700;
       line-height: 120%; /* 162px */
       text-transform: uppercase;
       @media screen and (max-width: 1500px) {
-        font-size: 93px;
+        font-size: 56px;
       }
       @media screen and (max-width: 913px) {
-        font-size: 84px;
+        font-size: 40px;
       }
       @media screen and (max-width: 817px) {
         line-height: normal; /* 162px */
@@ -218,33 +218,33 @@ onMounted(() => {
       margin-bottom: 15px;
       color: #000;
       font-family: 'Raleway';
-      font-size: 36px;
+      font-size: 20px;
       font-style: normal;
       font-weight: 700;
       line-height: 120%; /* 43.2px */
       text-transform: uppercase;
       @media screen and (max-width: 1500px) {
-        font-size: 24px;
+        font-size: 16px;
       }
       @media screen and (max-width: 913px) {
-        font-size: 20px;
+        font-size: 14px;
       }
       @media screen and (max-width: 463px) {
-        font-size: 18px;
+        font-size: 12px;
       }
     }
     &-description {
       color: #000;
       font-family: 'Onest';
-      font-size: 20px;
+      font-size: 18px;
       font-style: normal;
       font-weight: 400;
       line-height: 120%; /* 24px */
       @media screen and (max-width: 1500px) {
-        font-size: 17px;
+        font-size: 16px;
       }
       @media screen and (max-width: 913px) {
-        font-size: 14px;
+        font-size: 12px;
       }
     }
     &-bordered {
@@ -255,7 +255,7 @@ onMounted(() => {
     margin-bottom: 70px;
     color: #fff;
     font-family: 'Raleway';
-    font-size: 96px;
+    font-size: 50px;
     font-style: normal;
     font-weight: 700;
     line-height: 120%; /* 115.2px */

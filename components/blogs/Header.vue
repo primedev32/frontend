@@ -36,12 +36,12 @@
   &__logo {
     color: #fff;
     font-family: 'Onest';
-    font-size: 32px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 700;
     line-height: 120%; /* 38.4px */
     @media screen and (max-width: 913px) {
-      font-size: 25px;
+      font-size: 20px;
     }
     &-link {
       text-decoration: none;
@@ -53,7 +53,7 @@
     text-decoration: none;
     color: #fff;
     font-family: 'Onest';
-    font-size: 24px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -78,7 +78,7 @@
     }
   }
   &__btn {
-    padding: 18px 50px;
+    padding: 10px 20px;
     border-radius: 5px;
     border: 1px solid #fff;
     cursor: pointer;
@@ -88,27 +88,24 @@
       background: #ffffff4f;
     }
     @media screen and (max-width: 1500px) {
-      padding: 10px 20px;
+      padding: 10px 15px;
     }
     @media screen and (max-width: 913px) {
-      padding: 5px 10px;
+      padding: 5px 5px;
     }
   }
   &__btn-text {
     color: #fff;
     text-align: center;
     font-family: 'Onest';
-    font-size: 20px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     @media screen and (max-width: 1500px) {
-      font-size: 18px;
-    }
-    @media screen and (max-width: 913px) {
       font-size: 16px;
     }
-    @media screen and (max-width: 655px) {
+    @media screen and (max-width: 913px) {
       font-size: 14px;
     }
   }
