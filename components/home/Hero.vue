@@ -8,7 +8,7 @@
           autoplay
           muted
           loop
-          poster="/img/hero-poster.png"
+          poster="/img/hero-poster.webp"
         >
           <source src="/video/home-hero.mp4" type="video/mp4" />
           Ваш браузер не поддерживает видео.

@@ -62,7 +62,7 @@
     margin-bottom: 30px;
     color: #fff;
     font-family: 'Raleway';
-    font-size: 56px;
+    font-size: 36px;
     font-style: normal;
     font-weight: 700;
     line-height: 120%; /* 115.2px */
