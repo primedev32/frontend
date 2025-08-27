@@ -62,14 +62,12 @@
     margin-bottom: 30px;
     color: #fff;
     font-family: 'Raleway';
-    font-size: 36px;
+    font-size: 30px;
     font-style: normal;
     font-weight: 700;
     line-height: 120%; /* 115.2px */
     text-transform: uppercase;
-    @media screen and (max-width: 1500px) {
-      font-size: 46px;
-    }
+
     @media screen and (max-width: 655px) {
       font-size: 26px;
     }

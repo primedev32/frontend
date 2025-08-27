@@ -11,14 +11,14 @@
           <h3 class="projects__img-content-title">
             {{ $t('home-projects.card-1') }}
           </h3>
-          <a
+          <!-- <a
             href="https://t.me/primedevsite"
             target="_blank"
             class="projects__img-content-link"
             ><span class="projects__img-content-link-text"
               >{{ $t('home-projects.button') }}
             </span></a
-          >
+          > -->
         </div>
       </div>
       <ul class="list-reset projects__list" ref="list">
@@ -32,14 +32,14 @@
             <h3 class="projects__item-content-title">
               {{ $t(`home-projects.${item.title}`) }}
             </h3>
-            <a
-              :href="item.link"
-              target="_blank"
-              class="projects__item-content-link"
-              ><span class="projects__item-content-link-text">{{
-                $t('home-projects.button')
-              }}</span></a
-            >
+            <!-- <a
+                :href="item.link"
+                target="_blank"
+                class="projects__item-content-link"
+                ><span class="projects__item-content-link-text">{{
+                  $t('home-projects.button')
+                }}</span></a
+              > -->
           </div>
         </li>
       </ul>
