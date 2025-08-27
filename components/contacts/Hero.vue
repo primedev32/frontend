@@ -131,9 +131,9 @@ onMounted(() => {
     @media screen and (max-width: 655px) {
       font-size: 26px;
     }
-    @media screen and (max-width: 463px) {
-      font-size: 14px;
-    }
+    // @media screen and (max-width: 463px) {
+    //   font-size: 14px;
+    // }
   }
   &__description {
     color: #fff;

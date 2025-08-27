@@ -164,7 +164,7 @@ onMounted(() => {
       margin-bottom: 10px;
     }
     @media screen and (max-width: 463px) {
-      font-size: 14px;
+      // font-size: 14px;
       margin-bottom: 5px;
     }
   }

@@ -52,13 +52,11 @@ onMounted(() => {
 <style lang="scss" scoped>
 .adaptation {
   background: #fff;
-  padding: 100px 0;
+  padding: 100px 0 10px 0;
   @media screen and (max-width: 1500px) {
-    padding: 80px 0;
+    padding: 80px 0 10px 0;
   }
-  @media screen and (max-width: 463px) {
-    padding: 80px 0 30px 0;
-  }
+
   &__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;

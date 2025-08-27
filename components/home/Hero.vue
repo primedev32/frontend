@@ -3,7 +3,13 @@
     <div class="blur-background">
       <Header />
       <div class="hero__video-wrapper">
-        <video class="hero__video" autoplay muted loop>
+        <video
+          class="hero__video"
+          autoplay
+          muted
+          loop
+          poster="/img/hero-poster.png"
+        >
           <source src="/video/home-hero.mp4" type="video/mp4" />
           Ваш браузер не поддерживает видео.
         </video>

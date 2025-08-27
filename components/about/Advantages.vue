@@ -163,7 +163,7 @@ onMounted(() => {
       max-width: 100%;
     }
     @media screen and (max-width: 463px) {
-      font-size: 12px;
+      font-size: 13px;
     }
   }
   &__list {
@@ -224,9 +224,6 @@ onMounted(() => {
     }
     @media screen and (max-width: 1200px) {
       font-size: 14px;
-    }
-    @media screen and (max-width: 463px) {
-      font-size: 12px;
     }
   }
 }
