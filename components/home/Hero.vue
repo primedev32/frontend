@@ -8,14 +8,15 @@
           autoplay
           muted
           loop
-          poster="/img/hero-poster.webp"
+          playsinline
+          poster="/img/hero-poster.png"
         >
-          <source src="/video/home-hero.mp4" type="video/mp4" />
+          <source src="/video/hero-2.webm" type="video/webm" />
           Ваш браузер не поддерживает видео.
         </video>
         <div class="hero__overlay-dark"></div>
         <picture class="hero__overlay">
-          <img class="hero__image" src="/img/home-hero.webp" alt="Hero" />
+          <img class="hero__image" src="/img/hero-poster.png" alt="Hero" />
         </picture>
       </div>
 
@@ -139,6 +140,7 @@ onMounted(() => {
       display: block;
       height: 100%;
       width: 100%;
+      object-fit: cover;
     }
   }
   &__overlay {
