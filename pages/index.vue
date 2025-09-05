@@ -14,7 +14,7 @@
 
 <script lang="ts" setup>
 useHead({
-  title: 'Создание сайтов под ключ | Primedev.pro',
+  title: 'Создание сайтов под ключ | Разработка веб-дизайна',
   meta: [
     {
       name: 'description',
@@ -23,7 +23,7 @@ useHead({
     },
     {
       property: 'og:title',
-      content: 'Создание сайтов под ключ | Primedev.pro',
+      content: 'Создание сайтов под ключ | Разработка веб-дизайна',
     },
     {
       property: 'og:description',

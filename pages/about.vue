@@ -10,18 +10,16 @@
 
 <script lang="ts" setup>
 useHead({
-  title: 'О компании | Primedev.pro',
+  title: 'О нас ',
   meta: [
     {
       name: 'description',
-      content:
-        'Узнайте больше о Primedev.pro — компании, специализирующейся на веб-разработке и IT-услугах.',
+      content: 'Мы специализируемся на веб-разработке и IT-услугах.',
     },
-    { property: 'og:title', content: 'О компании | Primedev.pro' },
+    { property: 'og:title', content: 'О нас ' },
     {
       property: 'og:description',
-      content:
-        'Узнайте больше о нашей команде, проектах и подходе к разработке.',
+      content: 'Мы специализируемся на веб-разработке и IT-услугах.',
     },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://primedev.pro/about' },

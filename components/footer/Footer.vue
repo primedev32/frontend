@@ -14,15 +14,15 @@
         </nav>
       </div>
       <div class="footer__wrapper-2">
-        <div class="footer__wrapper-policy">
+        <!-- <div class="footer__wrapper-policy">
           <a
             href="/doc/policy.pdf"
             class="footer__wrapper-policy-link"
             target="_blank"
             >{{ $t('footer.policy') }}</a
           >
-          <span class="footer__wrapper-policy-text">© PrimeDev 2020–2025</span>
-        </div>
+          <span class="footer__wrapper-policy-text">© PrimeDev 2025</span>
+        </div> -->
         <ul class="list-reset footer__list-social">
           <li v-for="(item, index) in socialList" :key="index">
             <a :href="item.link" target="_blank" class="footer__link-social"

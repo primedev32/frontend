@@ -9,6 +9,6 @@ export const socialList = [
   },
   {
     icon: '/svg/telegram.svg',
-    link: 'https://t.me/primedevsite',
+    link: 'https://t.me/+79996211951',
   },
 ]

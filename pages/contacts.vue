@@ -9,18 +9,18 @@
 
 <script lang="ts" setup>
 useHead({
-  title: 'Контакты | Primedev.pro',
+  title: 'Контакты ',
   meta: [
     {
       name: 'description',
       content:
-        'Свяжитесь с нами! Контактная информация Primedev.pro: email, телефон, социальные сети. Мы всегда на связи!',
+        'Свяжитесь с нами! Контактная информация: email, телефон, социальные сети. Мы всегда на связи!',
     },
-    { property: 'og:title', content: 'Контакты | Primedev.pro' },
+    { property: 'og:title', content: 'Контакты ' },
     {
       property: 'og:description',
       content:
-        'Как связаться с Primedev.pro? Телефон, email, адрес и соцсети — вся информация для удобной коммуникации.',
+        'Как связаться с нами? Телефон, email, адрес и соцсети — вся информация для удобной коммуникации.',
     },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://primedev.pro/contacts' },

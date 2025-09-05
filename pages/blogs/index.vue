@@ -8,18 +8,17 @@
 
 <script lang="ts" setup>
 useHead({
-  title: 'Блог | Primedev.pro',
+  title: 'Блог',
   meta: [
     {
       name: 'description',
-      content:
-        'Читайте свежие статьи о веб-разработке, дизайне и IT-решениях от команды Primedev.pro.',
+      content: 'Читайте свежие статьи о веб-разработке, дизайне и IT-решениях.',
     },
-    { property: 'og:title', content: 'Блог | Primedev.pro' },
+    { property: 'og:title', content: 'Блог' },
     {
       property: 'og:description',
       content:
-        'Последние статьи о технологиях, разработке и цифровых решениях от Primedev.pro.',
+        'Последние статьи о технологиях, разработке и цифровых решениях.',
     },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://primedev.pro/blogs' },
