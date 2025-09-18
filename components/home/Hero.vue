@@ -92,7 +92,7 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .hero {
-  margin-bottom: 130px;
+  margin-bottom: 50px;
   width: 100%;
   height: 100vh;
   position: relative;
@@ -130,18 +130,18 @@ onMounted(() => {
     object-fit: cover;
     width: 100%;
     height: 100%;
-    @media screen and (max-width: 1086px) {
-      display: none;
-    }
+    // @media screen and (max-width: 1086px) {
+    //   display: none;
+    // }
   }
   &__image {
     display: none;
-    @media screen and (max-width: 1086px) {
-      display: block;
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
+    // @media screen and (max-width: 1086px) {
+    //   display: block;
+    //   height: 100%;
+    //   width: 100%;
+    //   object-fit: cover;
+    // }
   }
   &__overlay {
     position: absolute;
